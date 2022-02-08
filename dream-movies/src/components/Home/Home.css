@@ -1,0 +1,9 @@
+.ContainerHome{
+    background-color: #080F28;
+    height: 100vh;
+}
+
+.ContainerHomeMovies{
+    background-color: rgb(207, 207, 207);
+    height: 90%;
+}
