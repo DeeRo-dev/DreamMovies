@@ -15,6 +15,7 @@ function Home() {
             <Col className="Home__Col"><h2>Carteles/Publicidad</h2></Col>
           </Row>
         </Container>
+
       </Container>
     </div>
   );

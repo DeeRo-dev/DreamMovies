@@ -4,6 +4,7 @@
 
 .Home__Contaner{
     background-color: var(--color-primario);
+
     height: 100vh;
     display: flex;
     align-items: center;
