@@ -1,6 +1,21 @@
 
+import { GET_CAPITULOS_THESIMPSONS} from "../actions";
 
-export default function reducer(){
 
+const initialState = {
+
+  allCapitulosTheSimp:[],
+}
+
+export default function reducer(state = initialState, action){
+
+  switch(action.type){
+
+    case GET_CAPITULOS_THESIMPSONS:
+      return{
+        ...state,
+        allCapitulosTheSimp: action.payload
+      }
+  }
 
 }
