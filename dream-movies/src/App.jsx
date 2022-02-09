@@ -1,10 +1,8 @@
 import { useState } from "react";
 import logo from "./logo.svg";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-
-import Home from "./components/home/Home";
-import DetailTemp from "./components/DetailTemp/DetailTemp";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home, DetailTemp, Movie } from "../src/components/index.jsx"
 
 function App() {
   return (
@@ -13,6 +11,7 @@ function App() {
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/temp" element={<DetailTemp />} />
+            <Route path="/movies" element={<Movie />} />
          </Routes>
      </div>
     </BrowserRouter>

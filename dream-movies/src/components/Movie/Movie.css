@@ -1,4 +1,14 @@
+:root{
+    --color-primario: #080F28;
+}
+
 .Movie__Container{
-    background-color: rgb(0, 226, 226);
+    background-color: rgb(2, 104, 200);
     height: 100vh;
+}
+
+.Movie__Reproductor{
+    width: 70%;
+    height: 70%;
+    background-color: blueviolet;
 }
