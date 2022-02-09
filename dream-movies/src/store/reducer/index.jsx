@@ -3,7 +3,7 @@ import { GET_TEMP_THESIMPSONS, GET_CAPITULOS_THESIMPSONS} from "../actions";
 
 
 const initialState = {
-  allTempTheSimp:[],
+  allTempTheSimp:['fsdf'],
   allCapitulosTheSimp:[],
 }
 
@@ -19,7 +19,7 @@ export default function reducer(state = initialState, action){
     case GET_CAPITULOS_THESIMPSONS:
       return{
         ...state,
-        allTempTheSimp: action.payload
+        allTempTheSimp: action.data
       }
     default:
       return state

@@ -7,10 +7,10 @@ let apiKey = 'b1862b40bc3477ded26344589e44acf0';
 export function getTempSimp() {
   return async (dispatch) => {
     try {
-      const json = await axios.get(``);
+      const json = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=Jack+Reacher`);
       return dispatch({
         type: GET_TEMP_THESIMPSONS,
-        payload: json.data,
+        data: json.data,
        
       });
     } catch (e) {

@@ -2,10 +2,10 @@
 import React, {useEffect} from "react"
 
 import { useDispatch, useSelector } from "react-redux";
-import {getTempSimp} from "../store/actions"
+import {getTempSimp} from "../../store/actions"
 
 
-export default function Detail(){
+export default function DetailTemp(){
 
   const dispatch = useDispatch()
   const tempSimp = useSelector((state) => state.allTempTheSimp)
@@ -19,7 +19,7 @@ export default function Detail(){
   return(
 
     <div>
-      <h1></h1>
+      <h1>Hola</h1>
 
 
     </div>
