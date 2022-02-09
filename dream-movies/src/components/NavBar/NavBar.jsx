@@ -70,7 +70,7 @@ function NavBar() {
           </Carousel.Item>
           <Carousel.Item interval={4000}>
             <img
-              className="d-block w-50"
+              className="d-block w-100"
               src="https://elvortex.com/wp-content/uploads/2014/10/the-simpsons-banner-db96ea.jpg"
               alt="Third slide"
             />
