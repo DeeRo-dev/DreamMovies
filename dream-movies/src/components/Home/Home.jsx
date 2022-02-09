@@ -13,6 +13,7 @@ function Home() {
       <Container fluid className="ContainerHome">
         <div>
           <h2>Ultimas Agregadas</h2>
+          
         </div>
       </Container>
     </div>
