@@ -1,20 +1,21 @@
 import React from "react";
-import "./Home.css"
+import "./Home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { NavBar } from "../index";
-import { Container,  } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 function Home() {
-  var alto = window.pageXOffset;
-  console.log("alto",alto);
   return (
     <div>
       <NavBar />
-      <Container fluid className="ContainerHome">
-        <div>
-          <h2>Ultimas Agregadas</h2>
-          
-        </div>
+      <Container fluid className="Home__Contaner">
+        <Container fluid className="Home__Contaner_movies">
+          <Row className="Home__Row">
+            <Col className="Home__Col" xl={9}><h2>¡Ultimo Agregado!</h2></Col>
+            <Col className="Home__Col"><h2>Carteles/Publicidad</h2></Col>
+          </Row>
+        </Container>
+
       </Container>
     </div>
   );
