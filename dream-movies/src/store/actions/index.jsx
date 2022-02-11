@@ -7,8 +7,8 @@ let apiKey = 'b1862b40bc3477ded26344589e44acf0';
 export function getTempSimp() {
   return async (dispatch) => {
     try {
-      const json = await axios.get(`https://thesimpsonsquoteapi.glitch.me/quotes`);
-    //  https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=Jack+Reacher
+      const json = await axios.get(`https://api.themoviedb.org/3/tv/456?api_key=${apiKey}&language=es`);
+      
       return dispatch({
         type: GET_TEMP_THESIMPSONS,
         data: json.data,
