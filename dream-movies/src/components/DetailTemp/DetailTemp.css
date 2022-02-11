@@ -1,3 +1,18 @@
 .DetailTemp__Container{
-  background-color: aqua;
+  /* background-color: aqua; */
+}
+
+.DetailTemp__ContentCards{
+  display: flex;
+  flex-direction: row;
+}
+
+.DetailTemp__Cards{
+  background-color: rgb(255, 132, 0);
+  width: 32vh;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 20px 20px 0 0;
+  margin: 20px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
 }

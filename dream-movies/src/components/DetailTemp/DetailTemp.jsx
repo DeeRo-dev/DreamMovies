@@ -52,14 +52,14 @@ export default function DetailTemp(){
           <div>
             <h3>Tempordas</h3>
           </div>
-          <div>
+          <div  className="DetailTemp__ContentCards">
               {
                 info?.map(i =>{
                  
                   return(
-                    <div key={i.temp}>
+                    <div key={i.temp}  className="DetailTemp__Cards">
                     <CardTempSimp
-                    // className="DetailTemp__Contaner"
+                      
                        img={i.img}
                        estreno={i.estreno}
                        temp={i.temp}
