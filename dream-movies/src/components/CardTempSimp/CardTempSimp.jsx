@@ -10,8 +10,8 @@ return(
       <img src={img} alt="" className="CardTempSimp__Img"/>
     </div>
     
-    <h4>{temp}</h4>
-    <p>{estreno}</p>
+    <h4 className="CardTempSimp__Title">{temp}</h4>
+    <p className="CardTempSimp__TitleEstreno">{estreno}</p>
   </div>
 )
 }
