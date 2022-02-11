@@ -1,13 +1,27 @@
 .DetailTemp__Container{
   /* background-color: aqua; */
 }
+.DetailTemp__ContentTitleTemp{
+ width: auto;
+ height: auto;
+ text-align: center;
 
+}
+.DetailTemp__TitleTemp{
+  margin: 40px;
+  font-size: 35px;
+}
 .DetailTemp__ContentCards{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
   flex-direction: row;
+  margin: auto;
+  width: 200vh;
+  height: auto;
 }
 
 .DetailTemp__Cards{
+ display: inline-block; 
   background-color: rgb(255, 132, 0);
   width: 32vh;
   height: 50vh;

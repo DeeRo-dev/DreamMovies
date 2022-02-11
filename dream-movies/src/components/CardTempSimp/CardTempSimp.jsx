@@ -10,7 +10,7 @@ return(
       <img src={img} alt="" className="CardTempSimp__Img"/>
     </div>
     
-    <h4>Season {temp}</h4>
+    <h4>{temp}</h4>
     <p>{estreno}</p>
   </div>
 )
