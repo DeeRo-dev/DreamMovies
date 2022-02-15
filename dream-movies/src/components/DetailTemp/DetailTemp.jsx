@@ -5,7 +5,7 @@ import './DetailTemp.css'
 import { useDispatch, useSelector } from "react-redux";
 import {getTempSimp} from "../../store/actions"
 import CardTempSimp from "../CardTempSimp/CardTempSimp";
-
+import { Container, Row, Col } from "react-bootstrap";
 
 export default function DetailTemp(){
 
@@ -19,15 +19,15 @@ export default function DetailTemp(){
   },[dispatch])
 
   return(
-
-    <div>
+    
+    <div className="DetailTemp__Content"> 
       <NavBar/>
-
-        <div  className="DetailTemp__Container">
+      <Container fluid  className="DetailTemp__Container">
+       
           <div className="DetailTemp__ContentTitleTemp">
             <h3 className="DetailTemp__TitleTemp">Temporadas</h3>
           </div>
-          <div  className="DetailTemp__ContentCards">
+          <Container fluid  className="DetailTemp__ContentCards">
               {
                 tempSimp?.map(i =>{
                  
@@ -35,7 +35,7 @@ export default function DetailTemp(){
                     <div key={i.id}  className="DetailTemp__Cards">
                     <CardTempSimp
                       
-                      //  img={i.img}
+                       img={i.poster_path}
                        estreno={i.air_date}
                        temp={i.name}
                     />
@@ -46,8 +46,9 @@ export default function DetailTemp(){
                   )
               }
            
-          </div>
-        </div>
+          </Container>
+       
+        </Container>
     </div>
 
   )

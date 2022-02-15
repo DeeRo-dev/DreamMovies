@@ -1,5 +1,5 @@
-.DetailTemp__Container{
-  /* background-color: aqua; */
+.DetailTemp__Content{
+  background-image: url('https://i.pinimg.com/564x/5e/1b/9c/5e1b9c03d9cc95b2c55c570874d0b975.jpg');
 }
 .DetailTemp__ContentTitleTemp{
  width: auto;
@@ -12,20 +12,17 @@
   font-size: 35px;
 }
 .DetailTemp__ContentCards{
-  display: grid;
-  grid-template-columns: repeat(5,1fr);
-  flex-direction: row;
-  margin: auto;
-  width: 200vh;
-  height: auto;
+
+  text-align: center;
+  
 }
 
 .DetailTemp__Cards{
  display: inline-block; 
- 
-  width: 32vh;
-  height: 50vh;
-  
+  text-align: center;
+  width: 220px;
+  height: 370px;
+  background-color: #fff;
   border-radius: 20px 20px 0 0;
   margin: 20px;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
