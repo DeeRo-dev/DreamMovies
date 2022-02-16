@@ -2,7 +2,7 @@ import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, DetailTemp, Movie } from "../src/components/index.jsx"
+import { Home, DetailTemp, Movie, DetailCapitulos } from "../src/components/index.jsx"
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
       <div className="App">
          <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/temp" element={<DetailTemp />} />
+            <Route path="/temp/:idSerie" element={<DetailTemp />} />
+            <Route path="/capitulos/:idSerie/:idCapitulo" element={<DetailCapitulos />} />
             <Route path="/movie" element={<Movie />} />
          </Routes>
      </div>

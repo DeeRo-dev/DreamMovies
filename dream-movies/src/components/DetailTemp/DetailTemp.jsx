@@ -1,21 +1,22 @@
 
 import React, {useEffect} from "react"
+import {useParams, Link} from 'react-router-dom'
 import NavBar  from "../NavBar/NavBar";
 import './DetailTemp.css'
 import { useDispatch, useSelector } from "react-redux";
-import {getTempSimp} from "../../store/actions"
-import CardTempSimp from "../CardTempSimp/CardTempSimp";
+import {getTemp} from "../../store/actions"
+import CardTemp from "../CardTemp/CardTemp.jsx";
 import { Container, Row, Col } from "react-bootstrap";
-import {Link} from 'react-router-dom'
-export default function DetailTemp(){
 
+export default function DetailTemp(){
   const dispatch = useDispatch()
   const tempSimp = useSelector((state) => state.allTempTheSimp.seasons)
-
-  console.log(tempSimp)
+  const { idSerie } = useParams();
+  
+  console.log("tempSimp", tempSimp)
 
   useEffect(()=>{
-    dispatch(getTempSimp())
+    dispatch(getTemp(idSerie))
   },[dispatch])
 
   return(
@@ -33,14 +34,14 @@ export default function DetailTemp(){
                  
                   return(
                     <div key={i.id}  className="DetailTemp__Cards">
-                  <Link to={`/movie/${i.season_number}`}> 
-                    <CardTempSimp
+                    <Link to={`/capitulos/${idSerie}/${i.season_number}`} >
+                    <CardTemp
                       
                        img={i.poster_path}
                        estreno={i.air_date}
                        temp={i.name}
-                    /> 
-                     </Link>
+                    />
+                    </Link>
                     </div>
                   )
                 }
