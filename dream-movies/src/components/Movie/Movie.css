@@ -1,14 +1,29 @@
-:root{
-    --color-primario: #080F28;
-}
+@import "../../variables.css";
 
 .Movie__Container{
-    background-color: rgb(2, 104, 200);
+    background-color: rgb(30, 90, 62);
     height: 100vh;
 }
 
-.Movie__Reproductor{
-    width: 70%;
-    height: 70%;
-    background-color: blueviolet;
+
+
+.Movie__Row_Description{
+    background-color: var(--color-primario);
+    height: 40vh;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Movie__Row_info{
+    background-color: rgb(131, 131, 131);
+
+}
+
+#imgMovie{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    vertical-align: middle;
 }

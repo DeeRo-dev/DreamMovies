@@ -11,10 +11,10 @@ import { Container, Row, Col } from "react-bootstrap";
 
 export default function DetailTemp(){
   const dispatch = useDispatch()
-  const tempSimp = useSelector((state) => state.allTempTheSimp.seasons)
+  const tempSimp = useSelector((state) => state.allTemps.seasons)
   const { idSerie } = useParams();
   
-  console.log("tempSimp", tempSimp)
+
 
   useEffect(()=>{
     dispatch(getTemp(idSerie))
@@ -34,16 +34,16 @@ export default function DetailTemp(){
                 tempSimp?.map(i =>{
                  
                   return(
-                    <div key={i.id}  className="DetailTemp__Cards">
                     <Link to={`/capitulos/${idSerie}/${i.season_number}`} >
+                    <div key={i.id}  className="DetailTemp__Cards">
                     <CardTemp
                       
                        img={i.poster_path}
                        estreno={i.air_date}
                        temp={i.name}
                     />
-                    </Link>
                     </div>
+                    </Link>
                   )
                 }
             

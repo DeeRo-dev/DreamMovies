@@ -1,6 +1,4 @@
-:root{
-    --color-primario: #080F28;
-}
+@import "../../variables.css";
 
 .Home__Contaner{
     background-color: var(--color-primario);
