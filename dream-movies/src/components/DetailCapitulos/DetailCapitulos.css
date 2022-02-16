@@ -1,0 +1,29 @@
+.DetailCapitulos__Content{
+  background-image: url('https://i.pinimg.com/564x/5e/1b/9c/5e1b9c03d9cc95b2c55c570874d0b975.jpg');
+}
+.DetailCapitulos__ContentTitleTemp{
+ width: auto;
+ height: auto;
+ text-align: center;
+
+}
+.DetailCapitulos__TitleTemp{
+  margin: 40px;
+  font-size: 35px;
+}
+.DetailCapitulos__ContentCards{
+
+  text-align: center;
+  
+}
+
+.DetailCapitulos__Cards{
+ display: inline-block; 
+  text-align: center;
+  width: 220px;
+  height: 370px;
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+  margin: 20px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
