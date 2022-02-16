@@ -26,7 +26,7 @@ export default function DetailTemp(){
       <Container fluid  className="DetailTemp__Container">
        
           <div className="DetailTemp__ContentTitleTemp">
-            <h3 className="DetailTemp__TitleTemp">Temporadas</h3>
+            <h1 className="DetailTemp__TitleTemp">Temporadas</h1>
           </div>
           <Container fluid  className="DetailTemp__ContentCards">
               {
@@ -34,7 +34,7 @@ export default function DetailTemp(){
                  
                   return(
                     <div key={i.id}  className="DetailTemp__Cards">
-                    <Link to={`/capitulos/${idSerie}/${i.season_number}`} >
+                    <Link to={`/capitulos/${idSerie}/${i.season_number}`} className="DetailTemp__Link" >
                     <CardTemp
                       
                        img={i.poster_path}

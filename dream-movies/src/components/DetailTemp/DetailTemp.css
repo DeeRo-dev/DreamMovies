@@ -1,15 +1,33 @@
 .DetailTemp__Content{
-  background-image: url('https://i.pinimg.com/564x/5e/1b/9c/5e1b9c03d9cc95b2c55c570874d0b975.jpg');
+  /* background-image: url('https://i.pinimg.com/564x/f2/d3/d2/f2d3d2b829540f2475070b4155905f64.jpg'); */
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
 }
 .DetailTemp__ContentTitleTemp{
  width: auto;
  height: auto;
  text-align: center;
-
+ margin-top: 20px;
 }
 .DetailTemp__TitleTemp{
-  margin: 40px;
+  margin: auto;
   font-size: 35px;
+  white-space: nowrap;
+  width:210px;
+  animation: typing 3s steps(11),
+  blink 2s infinite step-end alternate;
+  overflow:hidden;
+  font-family: 'Permanent Marker', cursive;
+  border-bottom: 4px solid rgba(47, 148, 184, 0.699);
+
+}
+@keyframes typing{
+  from{width: 0;}
+  
+}
+@keyframes blink{
+  50% {border-color:transparent}
 }
 .DetailTemp__ContentCards{
 
@@ -22,8 +40,18 @@
   text-align: center;
   width: 220px;
   height: 370px;
-  background-color: #fff;
-  border-radius: 20px 20px 0 0;
+  background-color: transparent;
+  border-radius: 20px ;
   margin: 20px;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(69, 188, 232, 0.487);
+}
+.DetailTemp__Cards:hover{
+  background-color: rgba(47, 148, 184, 0.699);
+ 
+  transition: 1s;
+}
+.DetailTemp__Link{
+  text-decoration: none;
+
 }
