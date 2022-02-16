@@ -14,8 +14,8 @@
   margin: auto;
   font-size: 35px;
   white-space: nowrap;
-  width:210px;
-  animation: typing 3s steps(11),
+  width:215px;
+  animation: typing 2.5s steps(11),
   blink 2s infinite step-end alternate;
   overflow:hidden;
   font-family: 'Permanent Marker', cursive;
