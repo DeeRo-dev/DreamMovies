@@ -1,5 +1,5 @@
 
-import { GET_TEMP_THESIMPSONS, GET_CAPITULOS_THESIMPSONS} from "../actions";
+import { GET_CAPITULOS, GET_TEMPORADAS} from "../actions";
 
 
 const initialState = {
@@ -11,15 +11,16 @@ export default function reducer(state = initialState, action){
 
   switch(action.type){
 
-    case GET_TEMP_THESIMPSONS:
+    case GET_TEMPORADAS:
       return{
         ...state,
         allTempTheSimp: action.data
       }
-    case GET_CAPITULOS_THESIMPSONS:
+      
+    case GET_CAPITULOS:
       return{
         ...state,
-        allCapitulosTheSimp: action.payload
+        allCapitulosTheSimp: action.data
       }
     default:
       return state
