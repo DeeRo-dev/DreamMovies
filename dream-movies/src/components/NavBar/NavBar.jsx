@@ -9,8 +9,8 @@ function NavBar() {
       <Container fluid className="containerNav">
         <Navbar bg="primary" variant="dark" fixed="top" expand="lg">
           <Container fluid>
-            <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Brand href="http://localhost:3000/">Dream Movies</Navbar.Brand>
+            {/* <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
                 className="me-auto my-2 my-lg-0"
@@ -42,10 +42,10 @@ function NavBar() {
                 />
                 <Button variant="outline-success">Search</Button>
               </Form>
-            </Navbar.Collapse>
+            </Navbar.Collapse> */}
           </Container>
         </Navbar>
-        <Carousel>
+        {/* <Carousel>
           <Carousel.Item interval={4000}>
             <img
               className="d-block w-50"
@@ -81,7 +81,7 @@ function NavBar() {
               </p>
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel>
+        </Carousel> */}
       </Container>
     </div>
   );

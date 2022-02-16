@@ -7,11 +7,26 @@ background: radial-gradient(circle, rgba(176,163,0,1) 0%, rgba(255,236,1,1) 100%
  width: auto;
  height: auto;
  text-align: center;
-
+ margin-top: 20px;
 }
 .DetailTemp__TitleTemp{
-  margin: 40px;
+  margin: auto;
   font-size: 35px;
+  white-space: nowrap;
+  width:215px;
+  animation: typing 2.5s steps(11),
+  blink 2s infinite step-end alternate;
+  overflow:hidden;
+  font-family: 'Permanent Marker', cursive;
+  border-bottom: 4px solid rgba(47, 148, 184, 0.699);
+
+}
+@keyframes typing{
+  from{width: 0;}
+  
+}
+@keyframes blink{
+  50% {border-color:transparent}
 }
 .DetailTemp__ContentCards{
 
@@ -24,8 +39,18 @@ background: radial-gradient(circle, rgba(176,163,0,1) 0%, rgba(255,236,1,1) 100%
   text-align: center;
   width: 220px;
   height: 370px;
-  background-color: #fff;
-  border-radius: 20px 20px 0 0;
+  background-color: transparent;
+  border-radius: 20px ;
   margin: 20px;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(69, 188, 232, 0.487);
+}
+.DetailTemp__Cards:hover{
+  background-color: rgba(47, 148, 184, 0.699);
+ 
+  transition: 1s;
+}
+.DetailTemp__Link{
+  text-decoration: none;
+
 }
