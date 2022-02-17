@@ -23,3 +23,17 @@
     background-color: aquamarine;
     border: 1px solid black  ;
 }
+
+.Home__ContentSeries{
+    background-color: blue;
+}
+
+.Home__ContentMovie{
+    background-color: rgb(136, 255, 0);
+}
+.Home__ContentPoster1{
+    background-color: red;
+}
+.Home__ContentPoster2{
+    background-color: rgb(255, 0, 140);
+}
