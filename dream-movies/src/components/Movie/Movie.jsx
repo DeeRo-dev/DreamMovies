@@ -41,6 +41,7 @@ function Movie() {
         </Row>
         <Row className="Movie__Row_info">
           <Col className="Movie__Col_info">
+
             <div
               className="fb-comments"
               data-href="http://localhost:3000/movies"
