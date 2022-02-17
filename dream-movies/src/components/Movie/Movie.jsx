@@ -16,7 +16,7 @@ function Movie() {
         </Row>
         <Row className="Home__Row">
           <Col className="Home__Col">
-            <h2>MOVIE NAME</h2>
+            <h2>MOVIE NAMEe</h2>
             <div
               class="fb-comments"
               data-href="http://localhost:3000/movies"
