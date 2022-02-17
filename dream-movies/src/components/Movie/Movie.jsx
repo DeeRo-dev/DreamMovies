@@ -36,7 +36,7 @@ function Movie() {
             <p>{capitulo?.overview}</p>
           </Col>
           <Col >
-          <h3>Puntuacionn {capitulo.vote_average / 10}</h3>
+          <h3>Puntuacionnnnn {capitulo.vote_average / 10}</h3>
           </Col>
         </Row>
         <Row className="Movie__Row_info">
