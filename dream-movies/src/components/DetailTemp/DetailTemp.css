@@ -1,8 +1,7 @@
+
 .DetailTemp__Content{
-  /* background-image: url('https://i.pinimg.com/564x/f2/d3/d2/f2d3d2b829540f2475070b4155905f64.jpg'); */
-  /* background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
+  background: rgb(176,163,0);
+background: radial-gradient(circle, rgba(176,163,0,1) 0%, rgba(255,236,1,1) 100%);
 }
 .DetailTemp__ContentTitleTemp{
  width: auto;

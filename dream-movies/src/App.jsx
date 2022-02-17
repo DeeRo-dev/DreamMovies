@@ -11,8 +11,8 @@ function App() {
          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/temp/:idSerie" element={<DetailTemp />} />
-            <Route path="/capitulos/:idSerie/:idCapitulo" element={<DetailCapitulos />} />
-            <Route path="/movie" element={<Movie />} />
+            <Route path="/capitulos/:idSerie/:idTemporada" element={<DetailCapitulos />} />
+            <Route path="/movie/:idSerie/:idTemporada/:idCapitulo" element={<Movie />} />
          </Routes>
      </div>
     </BrowserRouter>
