@@ -13,13 +13,20 @@ function Home() {
         <Container fluid className="Home__Contaner_movies">
           <Row className="Home__Row">
             <Col className="Home__Col" xl={9}>
-              <h2>¡Ultimo Agregado!</h2>
+            <Container className="Home__ContentSeries">
+            <h2>¡Ultimo Agregado!</h2>
               <Link to="/temp/456" >
               <button>SIMPSON</button>
               </Link>
               <Link to="/temp/15260" >
               <button>Hora de aventura</button>
               </Link>
+            </Container>
+            <Container className="Home__ContentMovie">
+              <Col className="Home__ContentPoster1">sds</Col>
+              <Col className="Home__ContentPoster2">sasdasdas</Col>
+              <Col className="Home__ContentPoster2">dasdd</Col>
+            </Container>
             </Col>
             <Col className="Home__Col"><h2>Carteles/Publicidad</h2></Col>
           </Row>
