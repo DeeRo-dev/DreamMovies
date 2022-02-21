@@ -7,19 +7,26 @@
 
 
 
-.Movie__Row_Description{
+#MovieRowId{
     background-color: var(--color-primario);
+   
+   background-repeat: no-repeat;
+   background-size:cover;
     height: 40vh;
     color: white;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    filter: blur(2px) opacity(37%) drop-shadow(3px -3px 0px #0052ff);
+-webkit-filter: blur(2px) opacity(37%) drop-shadow(3px -3px 0px #0052ff);
+-moz-filter: blur(2px) opacity(37%) drop-shadow(3px -3px 0px #0052ff);
 }
 
 .Movie__Row_info{
     background-color: rgb(131, 131, 131);
 
 }
+
+
 
 #imgMovie{
     width: 90%;
