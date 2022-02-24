@@ -6,11 +6,11 @@ import { Container, Row, Col, Carousel, Navbar, Nav, NavDropdown, Form, FormCont
 function NavBar() {
   return (
     <div>
-      <Container fluid className="containerNav">
+      <Container fluid className="NavBar__ContainerNav">
         <Navbar bg="primary" variant="dark" fixed="top" expand="lg">
           <Container fluid>
             <Navbar.Brand href="http://localhost:3000/">Dream Movies</Navbar.Brand>
-            {/* <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
                 className="me-auto my-2 my-lg-0"
@@ -42,13 +42,13 @@ function NavBar() {
                 />
                 <Button variant="outline-success">Search</Button>
               </Form>
-            </Navbar.Collapse> */}
+            </Navbar.Collapse> 
           </Container>
         </Navbar>
-        {/* <Carousel>
+    <Carousel>
           <Carousel.Item interval={4000}>
             <img
-              className="d-block w-50"
+             
               src="http://www.emprendemania.com/wp-content/uploads/2013/08/thesimpsons.jpg"
               alt="First slide"
             />
@@ -59,10 +59,11 @@ function NavBar() {
           </Carousel.Item>
           <Carousel.Item interval={4000}>
             <img
-              className="d-block w-50"
+              
               src="https://laquilombo.files.wordpress.com/2014/08/los-simpsons-banner.jpg"
               alt="Second slide"
             />
+         
             <Carousel.Caption>
               <h3>SEGUNDA FOTO</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -70,7 +71,7 @@ function NavBar() {
           </Carousel.Item>
           <Carousel.Item interval={4000}>
             <img
-              className="d-block w-100"
+              
               src="https://elvortex.com/wp-content/uploads/2014/10/the-simpsons-banner-db96ea.jpg"
               alt="Third slide"
             />
@@ -81,7 +82,7 @@ function NavBar() {
               </p>
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel> */}
+        </Carousel> 
       </Container>
     </div>
   );
