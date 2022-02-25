@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCapitulos } from "../../store/actions";
 import NavBar from "../NavBar/NavBar";
-import CardTemp from "../CardTemp/CardTemp.jsx";
+import CardCapitulos from "../CardCapitulos/CardCapitulos.jsx";
 import "./DetailCapitulos.css";
 
 export default function DetailCapitulos() {
@@ -24,7 +24,7 @@ export default function DetailCapitulos() {
       <NavBar />
       <Container fluid className="DetailCapitulos__Container">
         <div className="DetailCapitulos__ContentTitleTemp">
-          <h3 className="DetailCapitulos__TitleTemp">Temporadas</h3>
+          <h3 className="DetailCapitulos__TitleTemp">Capitulos</h3>
         </div>
         <Container fluid className="DetailCapitulos__ContentCards">
           {capitulos?.map((i) => {
@@ -33,7 +33,7 @@ export default function DetailCapitulos() {
                 to={`/movie/${idSerie}/${i.season_number}/${i.episode_number}`}
               >
                 <div key={i.id} className="DetailCapitulos__Cards">
-                  <CardTemp
+                  <CardCapitulos
                     img={i.still_path}
                     estreno={i.air_date}
                     temp={i.name}

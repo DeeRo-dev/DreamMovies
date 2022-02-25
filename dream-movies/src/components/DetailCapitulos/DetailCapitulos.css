@@ -12,7 +12,7 @@
   font-size: 35px;
 }
 .DetailCapitulos__ContentCards{
-
+  background-color: aliceblue;
   text-align: center;
   
 }
@@ -20,10 +20,10 @@
 .DetailCapitulos__Cards{
  display: inline-block; 
   text-align: center;
-  width: 220px;
-  height: 370px;
-  background-color: #fff;
-  border-radius: 20px 20px 0 0;
+  width: 130vh;
+  height: 70px;
+ 
+  border-radius: 10px;
   margin: 20px;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
 }
