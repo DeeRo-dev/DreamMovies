@@ -1,7 +1,8 @@
 
 .DetailTemp__Content{
-  background: rgb(176,163,0);
-background: radial-gradient(circle, rgba(176,163,0,1) 0%, rgba(255,236,1,1) 100%);
+ 
+  background-image: url('https://i.pinimg.com/564x/b1/6b/e7/b16be7a3134c09cfed73d7c3425fcdbb.jpg');  
+
 }
 .DetailTemp__ContentTitleTemp{
  width: auto;
@@ -10,16 +11,16 @@ background: radial-gradient(circle, rgba(176,163,0,1) 0%, rgba(255,236,1,1) 100%
  margin-top: 20px;
 }
 .DetailTemp__TitleTemp{
-  margin: auto;
-  font-size: 35px;
+  margin:auto;
+  padding: 30px;
+ 
+  font-size: 55px;
+  font-family: 'Fredoka One';
   white-space: nowrap;
-  width:215px;
+  width:305px;
   animation: typing 2.5s steps(11),
   blink 2s infinite step-end alternate;
   overflow:hidden;
-  font-family: 'Permanent Marker', cursive;
-  border-bottom: 4px solid rgba(47, 148, 184, 0.699);
-
 }
 @keyframes typing{
   from{width: 0;}
@@ -29,9 +30,9 @@ background: radial-gradient(circle, rgba(176,163,0,1) 0%, rgba(255,236,1,1) 100%
   50% {border-color:transparent}
 }
 .DetailTemp__ContentCards{
-
+  background-color: aliceblue;
   text-align: center;
-  
+  width: 180vh;
 }
 
 .DetailTemp__Cards{

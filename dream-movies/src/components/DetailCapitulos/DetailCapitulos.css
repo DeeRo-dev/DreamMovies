@@ -1,5 +1,6 @@
 .DetailCapitulos__Content{
-  background-image: url('https://i.pinimg.com/564x/b1/6b/e7/b16be7a3134c09cfed73d7c3425fcdbb.jpg'); 
+   background-image: url('https://i.pinimg.com/564x/b1/6b/e7/b16be7a3134c09cfed73d7c3425fcdbb.jpg');  
+
 }
 .DetailCapitulos__ContentTitleTemp{
  width: auto;
@@ -10,6 +11,7 @@
 .DetailCapitulos__TitleTemp{
   margin: 20px;
   font-size: 55px;
+  
   font-family: 'Fredoka One';
 }
 .DetailCapitulos__ContentCards{
