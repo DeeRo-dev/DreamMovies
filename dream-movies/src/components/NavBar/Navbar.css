@@ -8,7 +8,6 @@
    height: 70px;
    width: 100%;
    box-shadow: 0 1px 10px -0px #000;
-   
   }
   .NavBar__TitleDream{
     color: #000 !important;
@@ -17,7 +16,6 @@
   }
 .NavBar__Img{
   width: 100%;
- 
   height: 400px;
 }
 @supports(object-fit: cover){
