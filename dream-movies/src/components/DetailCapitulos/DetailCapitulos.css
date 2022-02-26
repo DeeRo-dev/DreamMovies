@@ -1,5 +1,5 @@
 .DetailCapitulos__Content{
-  background-image: url('https://i.pinimg.com/564x/5e/1b/9c/5e1b9c03d9cc95b2c55c570874d0b975.jpg');
+  background-image: url('https://i.pinimg.com/564x/b1/6b/e7/b16be7a3134c09cfed73d7c3425fcdbb.jpg'); 
 }
 .DetailCapitulos__ContentTitleTemp{
  width: auto;
@@ -12,9 +12,9 @@
   font-size: 35px;
 }
 .DetailCapitulos__ContentCards{
-  background-color: aliceblue;
+  background-color: rgb(248, 247, 243);
   text-align: center;
-  
+  width: 160vh;
 }
 
 .DetailCapitulos__Cards{
@@ -22,8 +22,10 @@
   text-align: center;
   width: 130vh;
   height: 70px;
- 
-  border-radius: 10px;
   margin: 20px;
   box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.DetailCapitulos__Cards:hover{
+  background-color: rgb(9, 9, 6);
 }
