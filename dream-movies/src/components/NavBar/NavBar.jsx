@@ -49,7 +49,7 @@ function NavBar() {
           <Carousel.Item interval={4000}>
             <img
                className="NavBar__Img"
-              src="https://asicsulb.org/corporate/images/connect/beachfront/2018-03/Movies-on-the-House.jpg"
+              src="https://thumbs.dreamstime.com/b/online-movies-cinema-streaming-banner-laptop-d-glasses-popcorn-tickets-online-movies-cinema-streaming-176525320.jpg"
               alt="First slide"
             />
             <Carousel.Caption>
