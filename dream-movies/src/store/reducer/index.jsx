@@ -1,9 +1,10 @@
-import { GET_ALL_CAPITULOS, GET_TEMPORADAS, GET_ONE_CAPITULO } from "../actions";
+import { GET_ALL_CAPITULOS, GET_TEMPORADAS, GET_ONE_CAPITULO, GET_VIDEO_SERIE } from "../actions";
 
 const initialState = {
   allTemps: [],
   allCapitulos: [],
   oneCapitulo: [],
+  videoSerie: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -24,6 +25,12 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         oneCapitulo: action.data,
+      };
+
+    case GET_VIDEO_SERIE:
+      return {
+        ...state,
+        videoSerie: action.data,
       };
 
     default:
