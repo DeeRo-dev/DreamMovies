@@ -20,7 +20,7 @@
   height: 70px;
   align-items: center;
   margin-left: 5px;
-  padding-right: 100px;
+  /* padding-right: 100px; */
 }
 .CardCapitulos__Img:hover{
   width: 110px;
