@@ -1,27 +1,73 @@
-:root{
-    --color-primario: #080F28;
-}
+@import "../../variables.css";
 
 .Home__Contaner{
-    background-color: var(--color-primario);
-
-    height: 100vh;
+    /* background-color: var(--color-primario); */
+    background-color: black;
+    height: auto;
     display: flex;
     align-items: center;
+    color: #fff;
 }
 
 .Home__Contaner_movies{
-    background-color: rgb(207, 207, 207);
+    background-color: #000;
     height: 95%;
-    
+    width: 100%;
+    margin-top: 50px;
 }
 
 .Home__Row{
-    background-color: aquamarine;
+   
     height: 100%;
 }
 
 .Home__Col{
-    background-color: aquamarine;
+    
     border: 1px solid black  ;
+}
+
+.Home__ContentSeries{
+   
+    width: 100%;
+    height: 300px;
+}
+.Home__ContentEntrarSerie{
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin-right: 30px;
+}
+.Home__ContentEntrarSerie img{
+    width: 200px;
+    height: 200px;
+}
+
+.Home__ContentMovie{
+    width: auto;
+    height: auto;
+    text-align: center;
+    
+}
+.Home__ContentPoster1{
+ 
+    width: auto;
+    height:auto;
+    margin: 10px;
+}
+.Home__ContentPoster1 img{
+   
+    width: 122vh;
+    height:55vh;
+}
+.Home__ContentPoster2{
+
+    width: auto;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    margin: 16px;
+}
+.Home__ContentPoster2 img{
+    width: 37vh;
+    height:50vh;
 }

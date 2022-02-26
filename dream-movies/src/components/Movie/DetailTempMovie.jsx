@@ -2,7 +2,7 @@
 import React, {useEffect} from "react"
 import {useParams, Link} from 'react-router-dom'
 import NavBar  from "../NavBar/NavBar";
-import './DetailTemp.css'
+import './DetailTempMovie.css'
 import { useDispatch, useSelector } from "react-redux";
 import {getTemp} from "../../store/actions"
 import CardTemp from "../CardTemp/CardTemp.jsx";
@@ -20,14 +20,6 @@ export default function DetailTemp(){
   },[dispatch])
 
   return(
-    
-    <div className="DetailTemp__Content"> 
-      <NavBar/>
-      <Container fluid  className="DetailTemp__Container">
-       
-          <div className="DetailTemp__ContentTitleTemp">
-            <h1 className="DetailTemp__TitleTemp">Temporadas</h1>
-          </div>
           <Container fluid  className="DetailTemp__ContentCards">
               {
                 tempSimp?.map(i =>{
@@ -52,9 +44,7 @@ export default function DetailTemp(){
               }
            
           </Container>
-       
-        </Container>
-    </div>
+      
 
   )
 }

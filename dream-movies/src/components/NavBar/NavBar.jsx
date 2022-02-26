@@ -5,12 +5,12 @@ import { Container, Row, Col, Carousel, Navbar, Nav, NavDropdown, Form, FormCont
 
 function NavBar() {
   return (
-    <div>
-      <Container fluid className="containerNav">
-        <Navbar bg="primary" variant="dark" fixed="top" expand="lg">
-          <Container fluid>
-            <Navbar.Brand href="http://localhost:3000/">Dream Movies</Navbar.Brand>
-            {/* <Navbar.Toggle aria-controls="navbarScroll" />
+    <div >
+      <Container fluid className="NavBar__ContainerNav">
+        <Navbar  className="NavBar__Nav"   fixed="top" expand="lg">
+          <Container fluid >
+            <Navbar.Brand href="http://localhost:3000/" className="NavBar__TitleDream">Dream Movies</Navbar.Brand>
+            <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
                 className="me-auto my-2 my-lg-0"
@@ -42,46 +42,45 @@ function NavBar() {
                 />
                 <Button variant="outline-success">Search</Button>
               </Form>
-            </Navbar.Collapse> */}
+            </Navbar.Collapse> 
           </Container>
         </Navbar>
-        {/* <Carousel>
+    <Carousel>
           <Carousel.Item interval={4000}>
             <img
-              className="d-block w-50"
-              src="http://www.emprendemania.com/wp-content/uploads/2013/08/thesimpsons.jpg"
+               className="NavBar__Img"
+              src="https://thumbs.dreamstime.com/b/online-movies-cinema-streaming-banner-laptop-d-glasses-popcorn-tickets-online-movies-cinema-streaming-176525320.jpg"
               alt="First slide"
             />
             <Carousel.Caption>
-              <h3>PRIMER FOTO</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h3>Cinema</h3>
+              <p>Podras ver las peliculas que mas te guste!</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={4000}>
             <img
-              className="d-block w-50"
-              src="https://laquilombo.files.wordpress.com/2014/08/los-simpsons-banner.jpg"
+              src="http://i.imgur.com/4bucF8b.png"
               alt="Second slide"
+              className="NavBar__Img"
             />
+         
             <Carousel.Caption>
-              <h3>SEGUNDA FOTO</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h3>Hora de Aventura</h3>
+              <p>Podras ver la serie completa</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={4000}>
             <img
-              className="d-block w-100"
-              src="https://elvortex.com/wp-content/uploads/2014/10/the-simpsons-banner-db96ea.jpg"
+                className="NavBar__Img"
+              src="https://www.milenio.com/uploads/media/2020/06/12/doblaje-mexicano-serie-animada-contribuido.jpg"
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>TERCER FOTO</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <h3>Los Simpsons</h3>
+              <p>Podras ver la serie completa</p>
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel> */}
+        </Carousel> 
       </Container>
     </div>
   );

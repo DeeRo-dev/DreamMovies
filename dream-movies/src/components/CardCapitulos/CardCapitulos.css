@@ -1,19 +1,40 @@
-
-.CardTemp__ContentImg{
+.CardCapitulos__ContentCard{
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
   width: 100%;
-  height: 280px;
+  height: 85px;
+  background-color: #fff;
+  color: rgb(94, 170, 175);
+  font-family: 'Pacifico', cursive;
+}
+.CardCapitulos__ContentCard:hover{
+  background-color: rgb(183, 222, 225);
+  color: #000;
+  transition: 1.5s;
+}
+.CardCapitulos__ContentImg{
   margin: auto;
 }
-
-.CardTemp__Img{
-  width: 100%;
-  height: 100%;
-  border-radius: 20px 20px 0 0;
-}
-.CardTemp__Title{
-  margin-top: 5px;
+.CardCapitulos__Img{
+  width: 100px;
+  height: 70px;
+  align-items: center;
   margin-left: 5px;
+  /* padding-right: 100px; */
 }
-.CardTemp__TitleEstreno{
-  margin-left: 5px;
+.CardCapitulos__Img:hover{
+  width: 110px;
+  height: 80px;
+  transition: 1s;
+  padding-right: 0px;
+}
+.CardCapitulos__Title{
+  margin: auto;
+  font-size: 30px;
+ 
+  border-bottom: 1px solid rgb(183, 222, 225);
+}
+.CardCapitulos__TitleEstreno{
+  /* color: #aaa; */
+  font-size: 16px;
 }
