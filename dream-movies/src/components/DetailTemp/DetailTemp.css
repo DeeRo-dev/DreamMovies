@@ -3,14 +3,21 @@
 
 .DetailTemp__Content{
  
-  background-image: url('https://i.pinimg.com/564x/b1/6b/e7/b16be7a3134c09cfed73d7c3425fcdbb.jpg');  
+  background-color: var(--color-primario);   
 
 }
+
+.DetailTemp__Container{
+  background-color: var(--color-primario);   
+
+}
+
 .DetailTemp__ContentTitleTemp{
  width: auto;
  height: auto;
  text-align: center;
  margin-top: 20px;
+ 
 }
 .DetailTemp__TitleTemp{
   margin:auto;
