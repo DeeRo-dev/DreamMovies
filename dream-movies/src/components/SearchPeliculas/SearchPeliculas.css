@@ -1,0 +1,87 @@
+@import "../../variables.css";
+
+
+.DetailTemp__Content{
+ 
+  background-color: var(--color-primario);   
+
+}
+
+.DetailTemp__Container{
+  background-color: var(--color-primario);   
+  height: 100%;
+}
+
+.DetailTemp__ContentTitleTemp{
+ width: auto;
+ height: auto;
+ text-align: center;
+ margin-top: 20px;
+ background-color: var(--color-primario); 
+ 
+}
+.DetailTemp__TitleTemp{
+  margin:auto;
+  padding: 30px;
+ 
+  font-size: 55px;
+  font-family: 'Fredoka One';
+  white-space: nowrap;
+  width:305px;
+  animation: typing 2.5s steps(11),
+  blink 2s infinite step-end alternate;
+  overflow:hidden;
+}
+
+.loading{
+  z-index: 5;
+}
+
+.loading.true{
+  height: 100vh;
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden
+}
+
+.loading.false{
+  display: none;
+}
+
+@keyframes typing{
+  from{width: 0;}
+  
+}
+@keyframes blink{
+  50% {border-color:transparent}
+}
+.DetailTemp__ContentCards{
+  background-color: var(--color-primario); 
+  text-align: center;
+  width: 180vh;
+}
+
+.DetailTemp__Cards{
+ display: inline-block; 
+  text-align: center;
+  width: 220px;
+  height: 370px;
+  background-color: transparent;
+  border-radius: 20px ;
+  margin: 20px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(69, 188, 232, 0.487);
+}
+.DetailTemp__Cards:hover{
+  background-color: rgba(47, 148, 184, 0.699);
+ 
+  transition: 1s;
+}
+.DetailTemp__Link{
+  text-decoration: none;
+
+}

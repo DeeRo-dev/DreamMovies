@@ -1,4 +1,7 @@
-import React, { Fragment } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { searchPelicula } from "../../store/actions/index";
 import "./NavBar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -15,6 +18,26 @@ import {
 } from "react-bootstrap";
 
 function NavBar() {
+  const buscador = useSelector((state) => state.searchPelicula);
+
+  const navigateTo = useNavigate();
+  
+
+  const dispatch = useDispatch();
+
+  const [input, setInput] = useState("");
+
+  function handleChange(e) {
+    setInput(e.target.value);
+    console.log(input);
+  }
+
+  function handleSubmit(e) {
+
+    console.log(input);
+    navigateTo('/search/' + input)
+  }
+
   return (
     <Container fluid className="NavBar__ContainerNav">
       <Navbar className="NavBar__Nav" fixed="top" expand="lg">
@@ -48,21 +71,25 @@ function NavBar() {
                 Link
               </Nav.Link>
             </Nav>
-            <Form className="d-flex">
+
+            <Form onSubmit={(e) => handleSubmit(e)} className="d-flex">
               <FormControl
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                onChange={handleChange}
               />
-              <Button variant="outline-success">Search</Button>
+              <Button type="submit" variant="outline-success">
+                Search
+              </Button>
             </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       <Carousel className="NavBar__Carousel">
-        <Carousel.Item  className="NavBar__Carousel" interval={4000}>
+        <Carousel.Item className="NavBar__Carousel" interval={4000}>
           <img
             className="NavBar__Img"
             src="https://thumbs.dreamstime.com/b/online-movies-cinema-streaming-banner-laptop-d-glasses-popcorn-tickets-online-movies-cinema-streaming-176525320.jpg"
