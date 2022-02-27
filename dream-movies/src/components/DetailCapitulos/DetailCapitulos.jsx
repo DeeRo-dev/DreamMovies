@@ -14,7 +14,7 @@ export default function DetailCapitulos() {
 
   /*   console.log("idSerie", idSerie)
   console.log("idTemporada", idTemporada) */
-  console.log(capitulos);
+
   useEffect(() => {
     dispatch(getAllCapitulos(idSerie, idTemporada));
   }, [dispatch]);

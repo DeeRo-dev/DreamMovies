@@ -8,7 +8,7 @@ import {getTemp} from "../../store/actions"
 import CardTemp from "../CardTemp/CardTemp.jsx";
 import { Container, Row, Col } from "react-bootstrap";
 
-export default function DetailTempMovie(){
+export default function DetailTemp(){
   const dispatch = useDispatch()
   const tempSimp = useSelector((state) => state.allTemps.seasons)
   const { idSerie } = useParams();

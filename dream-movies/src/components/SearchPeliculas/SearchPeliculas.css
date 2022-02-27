@@ -9,7 +9,7 @@
 
 .DetailTemp__Container{
   background-color: var(--color-primario);   
-
+  height: 100%;
 }
 
 .DetailTemp__ContentTitleTemp{
@@ -17,6 +17,7 @@
  height: auto;
  text-align: center;
  margin-top: 20px;
+ background-color: var(--color-primario); 
  
 }
 .DetailTemp__TitleTemp{
@@ -31,6 +32,26 @@
   blink 2s infinite step-end alternate;
   overflow:hidden;
 }
+
+.loading{
+  z-index: 5;
+}
+
+.loading.true{
+  height: 100vh;
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden
+}
+
+.loading.false{
+  display: none;
+}
+
 @keyframes typing{
   from{width: 0;}
   

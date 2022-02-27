@@ -1,34 +1,34 @@
 import React, { useEffect } from "react";
-import { NavBar } from "../index";
+
 import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
-import { getOneCapitulo, getTemp, getVideoSerie } from "../../store/actions";
+import {  getPelicula, getPeliculaVideo } from "../../store/actions";
 import DetailTempMovie from "./DetailTempMovie.jsx"
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Movie.css";
+import "./TheRealMovie.css";
 
 
-function Movie() {
+function TheRealMovie() {
   const dispatch = useDispatch();
   const capitulo = useSelector((state) => state.oneCapitulo);
-  const tempSimp = useSelector((state) => state.allTemps.backdrop_path);
-  const videoSerie = useSelector((state) => state.videoSerie);
-  const { idSerie, idTemporada, idCapitulo } = useParams();
+  const video = useSelector((state) => state.videoSerie);
+  const { idSerie } = useParams();
 
   useEffect(() => {
-    dispatch(getOneCapitulo(idSerie, idTemporada, idCapitulo));
-    dispatch(getTemp(idSerie));
-    dispatch(getVideoSerie(idSerie));
+ 
+    dispatch(getPelicula(idSerie));
+    dispatch(getPeliculaVideo(idSerie));
   }, [dispatch]);
 
-  const backgroundImageURL = `https://image.tmdb.org/t/p/w500/${tempSimp}`;
+  const backgroundImageURL = `https://image.tmdb.org/t/p/w500/${capitulo?.belongs_to_collection?.backdrop_path}`;
 
   const containerStyle = {
     backgroundImage: `url(${backgroundImageURL})`,
   };
 
-
+console.log("capitulo", capitulo);
+console.log("video", video);
 
   
   return (
@@ -38,19 +38,19 @@ function Movie() {
           <Col sm={12} xl={12} xxl={2} className="Movie__Col_Foto">
             <img
               id="imgMovie"
-              src={`https://image.tmdb.org/t/p/w500/${capitulo.still_path}`}
+              src={`https://image.tmdb.org/t/p/w500/${capitulo?.backdrop_path}`}
               alt=""
             />
             {/*  Nombre y Fecha de capitulo recortado solo al año */}
           </Col>
           <Col  className="Movie__Col" sm={12}  xxl={6}>
             <h2>
-              {capitulo?.name}. ({capitulo.air_date?.substring(0, 4)})
+              {capitulo?.original_title}. ({capitulo.release_date?.substring(0, 4)})
             </h2>
             <p>{capitulo?.overview}</p>
           </Col>
           <Col className="Movie__Col" sm={12} xxl={4}>
-          <div className="puntuacionDiv">
+            <div className="puntuacionDiv">
             <h3>Puntuacion {capitulo.vote_average?.toFixed()} / 10</h3>
             </div>
           </Col>
@@ -59,18 +59,18 @@ function Movie() {
           <Col className="Movie__Col_Reproductor">
             <div className="Movie__Col_Reproductor_Container">
 
-            <iframe
+          {  <iframe
               src={`https://www.youtube.com/embed/${
-                videoSerie.results
-                  ? videoSerie.results[0]?.key
-                    ? videoSerie.results[0].key
+                video.results
+                  ? video.results[0]?.key
+                    ? video.results[0].key
                     : "wzCHvUMaaG0"
                   : "wzCHvUMaaG0"
               }`}
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            ></iframe>
+            ></iframe>}
             </div>
           </Col>
         </Row>
@@ -82,8 +82,8 @@ function Movie() {
         <Row className="Movie__Row_info">
           <Col xxl={12} className="Movie__Col_info">
             <div
-              class="fb-comments"
-              data-href={`localhost:3000/movie/${idSerie}/${idTemporada}/${idCapitulo}`}
+              className="fb-comments"
+              data-href={`localhost:3000/movie/${idSerie}`}
               data-width="300"
               data-numposts="5"
             ></div>
@@ -94,4 +94,4 @@ function Movie() {
   );
 }
 
-export default Movie;
+export default TheRealMovie;

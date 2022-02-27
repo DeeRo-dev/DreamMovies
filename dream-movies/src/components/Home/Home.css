@@ -2,7 +2,7 @@
 
 .Home__Contaner{
     /* background-color: var(--color-primario); */
-    background-color: black;
+    background-color: var(--color-primario);
     height: auto;
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@
 }
 
 .Home__Contaner_movies{
-    background-color: #000;
+    background-color: var(--color-primario);
     height: 95%;
     width: 100%;
     margin-top: 50px;

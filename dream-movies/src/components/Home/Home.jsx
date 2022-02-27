@@ -45,15 +45,47 @@ function Home() {
               <h1>Proximamente</h1>
                 <h2>Se podran ver las mejores peliculas en DreamMovies</h2>
                </div>
-
+               <Link
+                to={`/movie/${315635}/`}
+              > 
               <Col className="Home__ContentPoster1"><img src={poster1} alt="" /></Col>
-               <Col className="Home__ContentPoster2"><img src={poster2} alt="" /></Col>
-              <Col className="Home__ContentPoster2"><img src={poster3} alt="" /></Col> 
-              <Col className="Home__ContentPoster2"><img src={poster4} alt="" /></Col> 
-              <Col className="Home__ContentPoster1"><img src={poster5} alt="" /></Col>
-               <Col className="Home__ContentPoster2"><img src={poster6} alt="" /></Col>
-              <Col className="Home__ContentPoster2"><img src={poster7} alt="" /></Col> 
-              <Col className="Home__ContentPoster2"><img src={poster8} alt="" /></Col> 
+              </Link>
+               
+              <Link
+                to={`/movie/${414906}/`}
+              > 
+              <Col className="Home__ContentPoster2"> <img src={poster2} alt="" /></Col>
+              </Link>
+              <Link
+                to={`/movie/${41446}/`}
+              > 
+              <Col className="Home__ContentPoster2"> <img src={poster3} alt="" /></Col> 
+              </Link>
+              <Link
+                to={`/movie/${603}/`}
+              > 
+              <Col className="Home__ContentPoster2"> <img src={poster4} alt="" /></Col> 
+              </Link>
+              <Link
+                to={`/movie/${335787}/`}
+              > 
+              <Col className="Home__ContentPoster1"> <img src={poster5} alt="" /></Col>
+              </Link>
+              <Link
+                to={`/movie/${18397}/`}
+              > 
+               <Col className="Home__ContentPoster2"> <img src={poster6} alt="" /></Col>
+               </Link>
+               <Link
+                to={`/movie/${18397}/`}
+              > 
+              <Col className="Home__ContentPoster2"> <img src={poster7} alt="" /></Col> 
+              </Link>
+              <Link
+                to={`/movie/${673309}/`}
+              > 
+              <Col className="Home__ContentPoster2"> <img src={poster8} alt="" /></Col> 
+              </Link>
             </Container>
             </Col>
             <Col className="Home__Col"><h2>Carteles/Publicidad</h2></Col>
