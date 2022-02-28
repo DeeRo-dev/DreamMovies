@@ -27,10 +27,19 @@
 }
 
 .Home__ContentSeries{
-   
+   display: flex;
     width: 100%;
-    height: 300px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
+
+.Home__ContentSeries img {
+padding: 30px;    
+}
+
 .Home__ContentEntrarSerie{
     display: inline-block;
     width: auto;
@@ -43,22 +52,12 @@
 }
 
 .Home__ContentMovie{
-    width: auto;
-    height: auto;
+    width: 100%;
     text-align: center;
     
 }
-.Home__ContentPoster1{
- 
-    width: auto;
-    height:auto;
-    margin: 10px;
-}
-.Home__ContentPoster1 img{
-   
-    width: 122vh;
-    height:55vh;
-}
+
+
 .Home__ContentPoster2{
 
     width: auto;
@@ -68,6 +67,6 @@
     margin: 16px;
 }
 .Home__ContentPoster2 img{
-    width: 37vh;
+    width: 100%;
     height:50vh;
 }
