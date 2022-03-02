@@ -5,7 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { searchPelicula } from "../../store/actions";
 import CardSearchPelicula from "../CardTemp/CardTemp.jsx";
 import { Container, Spinner } from "react-bootstrap";
+import shrekTriste from "../../Images/shrekTriste.png"
 import "./SearchPeliculas.css";
+
+
+
 
 export default function DetailTemp() {
   const dispatch = useDispatch();
@@ -20,8 +24,10 @@ console.log(pelicula);
 
 setTimeout(() => {
   setLoading(false);
-}, 2000);
+}, 4000);
 
+
+if (pelicula?.results?.length > 0) {
   return (
     <div className="DetailTemp__Content">
       <Container
@@ -58,4 +64,23 @@ setTimeout(() => {
       </Container>
     </div>
   );
+} 
+  else return (
+    <div className="DetailTemp__Content">
+      <Container
+        fluid={+true}
+        className={loading ? "loading true" : "loading false"}
+      >
+       
+        <Spinner animation="border" variant="dark" />
+      </Container>
+     <NavBar />
+      <Container fluid className="DetailTemp__Container_Error">
+        <h2>NO SE ENCONTRARON PELICULAS CON ESE NOMBRE</h2>
+           <img src={shrekTriste} alt="" />
+      </Container>
+    </div>
+    
+  );
+  
 }

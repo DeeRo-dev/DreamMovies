@@ -18,7 +18,7 @@ useEffect(()=> {
 },[dispatch])
   const pMasvistas = useSelector(state =>  state.peliculasPopulares)
   
-  console.log(pMasvistas.results[0].id)
+  console.log(pMasvistas?.results?.[0]?.id)
 
   return (
     <div>
@@ -32,64 +32,64 @@ useEffect(()=> {
               
                 <Link to="/temp/456">
                   <div className="Home__ContentEntrarSerie">
-                    <img src={simp} alt="" />
+                    <img src="" alt="" />
                   </div>
                 </Link>
                 <Link to="/temp/15260">
                   <div className="Home__ContentEntrarSerie">
-                    <img src={hAventura} alt="" />
+                    <img src="" alt="" />
                   </div>
                 </Link>
               </Container>
-              <Container className="Home__ContentMovie">
+              <Container fluid className="Home__ContentMovie">
                 <div>
                   <h1>Proximamente</h1>
                   <h2>Se podran ver las mejores peliculas en DreamMovies</h2>
                 </div>
                 
-                <Link to={`/movie/${pMasvistas.results[12].id}/`}>
+                <Link to={`/movie/${pMasvistas?.results?.[12]?.id}/`}>
                   <Col className="Home__ContentPoster1">
                     <Ratio aspectRatio="16x9">
-                      <Image responsive src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[12].backdrop_path}`} alt="" />
+                      <Image src={`https://image.tmdb.org/t/p/w500${pMasvistas?.results?.[12]?.backdrop_path}`} alt="" />
                     </Ratio>
                   </Col>
                 </Link>
 
-                <Link to={`/movie/${pMasvistas.results[4].id}/`}>
+                <Link to={`/movie/${pMasvistas?.results?.[4]?.id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[4].poster_path}`} alt="" />
+                    <Image  src={`https://image.tmdb.org/t/p/w500${pMasvistas?.results?.[4]?.poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${pMasvistas.results[5].id}/`}>
+                <Link to={`/movie/${pMasvistas?.results?.[5]?.id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[5].poster_path}`} alt="" />
+                    <Image  src={`https://image.tmdb.org/t/p/w500${pMasvistas?.results?.[5]?.poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${pMasvistas.results[3].id}/`}>
+                <Link to={`/movie/${pMasvistas?.results?.[3]?.id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[3].poster_path}`} alt="" />
+                    <Image  src={`https://image.tmdb.org/t/p/w500${pMasvistas?.results?.[3]?.poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${pMasvistas.results[10].id}/`}>
+                <Link to={`/movie/${pMasvistas?.results?.[10].id}/`}>
                   <Col className="Home__ContentPoster1">
                     <Ratio aspectRatio="16x9">
-                      <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[10].backdrop_path}`} alt="" />
+                      <Image  src={`https://image.tmdb.org/t/p/w500${pMasvistas?.results?.[10]?.backdrop_path}`} alt="" />
                     </Ratio>
                   </Col>
                 </Link>
-                <Link to={`/movie/${pMasvistas.results[6].id}/`}>
+                <Link to={`/movie/${pMasvistas?.results?.[6]?.id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[6].poster_path}`} alt="" />
+                    <Image  src={`https://image.tmdb.org/t/p/w500${pMasvistas?.results?.[6]?.poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${pMasvistas.results[8].id}/`}>
+                <Link to={`/movie/${pMasvistas?.results?.[8].id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[8].poster_path}`} alt="" />
+                    <Image  src={`https://image.tmdb.org/t/p/w500${pMasvistas?.results?.[8]?.poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${pMasvistas.results[11].id}/`}>
+                <Link to={`/movie/${pMasvistas?.results?.[11].id}/`}>
                   <Col className="Home__ContentPoster2">
-                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[11].poster_path}`} alt="" />
+                    <Image  src={`https://image.tmdb.org/t/p/w500${pMasvistas?.results?.[11]?.poster_path}`} alt="" />
                   </Col>
                 </Link>
               </Container>

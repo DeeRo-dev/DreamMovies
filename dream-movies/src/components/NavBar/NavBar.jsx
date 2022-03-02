@@ -25,7 +25,6 @@ function NavBar() {
   const [navBarBackground, setNavBarBackgorund] = useState(false);
   const [input, setInput] = useState("");
 
-
   const changeBackground = () => {
     if (screen.width < 1500) {
       if (window.scrollY >= 10) {
@@ -38,14 +37,19 @@ function NavBar() {
     }
   };
 
-  window.addEventListener("scroll", changeBackground); 
-  
+  window.addEventListener("scroll", changeBackground);
+
   function handleChange(e) {
     setInput(e.target.value);
   }
 
   function handleSubmit(e) {
-    navigateTo("/search/" + input);
+    if (input !== "" && input !== ".") {
+      navigateTo("/search/" + input);
+    } else {
+      e.preventDefault()
+      alert("Selecciona un nombre valido");
+    }
   }
 
   useEffect(() => {
@@ -56,7 +60,12 @@ function NavBar() {
 
   return (
     <Container fluid className="NavBar__ContainerNav">
-      <Navbar className={navBarBackground ? "navbar active" : "navbar false"} variant="dark" fixed="top" expand="lg">
+      <Navbar
+        className={navBarBackground ? "navbar active" : "navbar false"}
+        variant="dark"
+        fixed="top"
+        expand="lg"
+      >
         <Container fluid>
           <Navbar.Brand
             href="http://localhost:3000/"
@@ -83,7 +92,6 @@ function NavBar() {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
-             
             </Nav>
 
             <Form onSubmit={(e) => handleSubmit(e)} className="d-flex">
