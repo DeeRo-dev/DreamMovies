@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { peliculasPopulares } from "../../store/actions";
 import { NavBar } from "../index";
 import { Container, Row, Col, Image, Ratio } from "react-bootstrap";
+import { useState } from "react";
 
 function Home() {
   const poster1 = [
@@ -42,9 +43,12 @@ function Home() {
 
   const dispatch = useDispatch();
   
-
-
+useEffect(()=> {
+  dispatch(peliculasPopulares())
+},[dispatch])
+  const pMasvistas = useSelector(state =>  state.peliculasPopulares)
   
+  console.log(pMasvistas.results[0].id)
 
   return (
     <div>
@@ -53,8 +57,9 @@ function Home() {
         <Container fluid className="Home__Contaner_movies">
           <Row className="Home__Row">
             <Col className="Home__Col" xxl={9}>
+            <h2 className="Home__ContentSeriesTitlte">¡Ultimo Agregado!</h2>
               <Container className="Home__ContentSeries">
-                <h2>¡Ultimo Agregado!</h2>
+              
                 <Link to="/temp/456">
                   <div className="Home__ContentEntrarSerie">
                     <img src={simp} alt="" />
@@ -71,57 +76,55 @@ function Home() {
                   <h1>Proximamente</h1>
                   <h2>Se podran ver las mejores peliculas en DreamMovies</h2>
                 </div>
-
-                <Link to={`/movie/${315635}/`}>
+                
+                <Link to={`/movie/${pMasvistas.results[12].id}/`}>
                   <Col className="Home__ContentPoster1">
                     <Ratio aspectRatio="16x9">
-                      <Image responsive src={poster1} alt="" />
+                      <Image responsive src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[12].backdrop_path}`} alt="" />
                     </Ratio>
                   </Col>
                 </Link>
 
-                <Link to={`/movie/${414906}/`}>
+                <Link to={`/movie/${pMasvistas.results[4].id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={poster2} alt="" />
+                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[4].poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${41446}/`}>
+                <Link to={`/movie/${pMasvistas.results[5].id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={poster3} alt="" />
+                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[5].poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${603}/`}>
+                <Link to={`/movie/${pMasvistas.results[3].id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={poster4} alt="" />
+                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[3].poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${335787}/`}>
+                <Link to={`/movie/${pMasvistas.results[10].id}/`}>
                   <Col className="Home__ContentPoster1">
                     <Ratio aspectRatio="16x9">
-                      <Image fluid src={poster5} alt="" />
+                      <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[10].backdrop_path}`} alt="" />
                     </Ratio>
                   </Col>
                 </Link>
-                <Link to={`/movie/${18397}/`}>
+                <Link to={`/movie/${pMasvistas.results[6].id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={poster6} alt="" />
+                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[6].poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${18397}/`}>
+                <Link to={`/movie/${pMasvistas.results[8].id}/`}>
                   <Col xxl={4} className="Home__ContentPoster2">
-                    <Image fluid src={poster7} alt="" />
+                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[8].poster_path}`} alt="" />
                   </Col>
                 </Link>
-                <Link to={`/movie/${673309}/`}>
+                <Link to={`/movie/${pMasvistas.results[11].id}/`}>
                   <Col className="Home__ContentPoster2">
-                    <Image fluid src={poster8} alt="" />
+                    <Image fluid src={`https://image.tmdb.org/t/p/w500${pMasvistas.results[11].poster_path}`} alt="" />
                   </Col>
                 </Link>
               </Container>
             </Col>
-            <Col className="Home__Col">
-              <h2>Carteles/Publicidad</h2>
-            </Col>
+          
           </Row>
         </Container>
       </Container>

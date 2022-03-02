@@ -17,25 +17,30 @@
 }
 
 .Home__Row{
-   
+   width: 100%;
+ 
     height: 100%;
 }
 
 .Home__Col{
-    
+    width: 100%;
+   
     border: 1px solid black  ;
 }
 
 .Home__ContentSeries{
    display: flex;
     width: 100%;
-
-    flex-direction: column;
+    flex-direction:row ;
     align-items: center;
     justify-content: center;
     align-content: center;
 }
-
+.Home__ContentSeriesTitlte{
+  width: auto;
+   margin-top: 20px;
+   text-align: center;
+}
 .Home__ContentSeries img {
 padding: 30px;    
 }

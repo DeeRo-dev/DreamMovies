@@ -9,7 +9,7 @@
 }
 .CardCapitulos__ContentCard:hover{
   background-color: rgb(183, 222, 225);
-  color: #000;
+  /* color: #000; */
   transition: 1.5s;
 }
 .CardCapitulos__ContentImg{
