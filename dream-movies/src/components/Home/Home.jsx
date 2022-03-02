@@ -6,40 +6,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { peliculasPopulares } from "../../store/actions";
 import { NavBar } from "../index";
 import { Container, Row, Col, Image, Ratio } from "react-bootstrap";
-import { useState } from "react";
+
 
 function Home() {
-  const poster1 = [
-    "https://blogdesuperheroes.es/imagen-noti/109798_big-1280x720.jpg",
-  ];
-  const poster2 = [
-    "https://www.dondeir.com/wp-content/uploads/2020/01/the-batman-2022-poster.jpg",
-  ];
-  const poster3 = [
-    "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEfNLUCL5WBygMcyw9J7V4RacUqaZWSW3rMaP9bex7QTM4FepY",
-  ];
-  const poster4 = [
-    "https://img.aullidos.com/imagenes/caratulas/the-matrix-resurrection-poster-new.jfif",
-  ];
-  const poster5 = [
-    "https://cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/NHTBN6LFVNFUFFAVV5JVMEAY2Y.JPG",
-  ];
-  const poster6 = [
-    "https://cuevana3.io/wp-content/uploads/2022/02/catch-the-fair-one-54705-poster-200x300.jpg",
-  ];
-  const poster7 = [
-    "https://cuevana3.io/wp-content/uploads/2022/02/caida-en-picado-el-caso-contra-boeing-54642-poster-200x300.jpg",
-  ];
-  const poster8 = [
-    "https://cuevana3.io/wp-content/uploads/2022/02/american-underdog-54505-poster-200x300.jpg",
-  ];
-  const simp = [
-    "https://ep00.epimg.net/elpais/imagenes/2017/09/21/fotorrelato/1506004325_686220_1506008048_album_normal.jpg",
-  ];
-  const hAventura = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIHi8_RLEG56RekY8iVjR3vcv8aHxD_S5DwbKsCn4Gj69posdRRmmuSMXz8G4GQAc7atQ&usqp=CAU",
-  ];
-
+ 
 
   const dispatch = useDispatch();
   
