@@ -29,7 +29,7 @@ function Movie() {
   };
 
 
-
+console.log(capitulo);
   
   return (
     <div>
@@ -38,7 +38,7 @@ function Movie() {
           <Col sm={12} xl={12} xxl={2} className="Movie__Col_Foto">
             <img
               id="imgMovie"
-              src={`https://image.tmdb.org/t/p/w500/${capitulo.still_path}`}
+              src={`https://image.tmdb.org/t/p/original/${capitulo.still_path}`}
               alt=""
             />
             {/*  Nombre y Fecha de capitulo recortado solo al año */}
@@ -68,7 +68,7 @@ function Movie() {
                   : "wzCHvUMaaG0"
               }`}
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
             </div>
@@ -79,16 +79,7 @@ function Movie() {
             <DetailTempMovie />
           </Col>
         </Row>
-        <Row className="Movie__Row_info">
-          <Col xxl={12} className="Movie__Col_info">
-            <div
-              class="fb-comments"
-              data-href={`localhost:3000/movie/${idSerie}/${idTemporada}/${idCapitulo}`}
-              data-width="300"
-              data-numposts="5"
-            ></div>
-          </Col>
-        </Row>
+       
       </Container>
     </div>
   );

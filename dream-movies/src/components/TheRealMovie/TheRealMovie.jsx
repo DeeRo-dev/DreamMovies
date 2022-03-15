@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import { getPelicula, getPeliculaVideo } from "../../store/actions";
+import { NavBarMovie } from "../index";
 import DetailTempMovie from "./DetailTempMovie.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./TheRealMovie.css";
@@ -20,7 +21,7 @@ function TheRealMovie() {
   useEffect(() => {
     dispatch(getPelicula(idSerie));
     dispatch(getPeliculaVideo(idSerie));
-  });
+  }, [dispatch]);
 
   const backgroundImageURL = `https://image.tmdb.org/t/p/w500/${capitulo?.belongs_to_collection?.backdrop_path}`;
 
@@ -40,7 +41,7 @@ function TheRealMovie() {
       >
         <Spinner animation="grow" variant="light" />
       </Container>
-
+    <NavBarMovie />
       <Container fluid className="Movie__Container">
         <Row style={containerStyle} id="MovieRowId">
           <Col sm={12} xl={12} xxl={2} className="Movie__Col_Foto">

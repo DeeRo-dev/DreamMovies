@@ -26,11 +26,11 @@ export default function DetailTempMovie(){
                  
                   return(
 
-                    <Link to={`/capitulos/${idSerie}/${i.season_number}`} >
-                    <div key={i.id}  className="DetailTemp__Cards">
+                    <Link key={i.id} to={`/capitulos/${idSerie}/${i.season_number}`} >
+                    <div   key={i.id}  className="DetailTemp__Cards">
 
                     <CardTemp
-                      
+                     key={i.id}
                        img={i.poster_path}
                        estreno={i.air_date}
                        temp={i.name}

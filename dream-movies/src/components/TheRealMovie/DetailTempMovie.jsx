@@ -17,8 +17,6 @@ export default function DetailTemp(){
   const navigateTo = useNavigate();
 
   function handleSubmit(input) {
-
-    console.log(input);
     navigateTo('/movie/' + input)
   }
 
@@ -40,7 +38,7 @@ export default function DetailTemp(){
                     <div key={i.id}  className="DetailTemp__Cards">
 
                     <CardTemp
-                      
+                      key={i.id}
                        img={i.poster_path}
                        estreno={i.air_date}
                        temp={i.name}

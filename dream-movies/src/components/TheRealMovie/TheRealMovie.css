@@ -6,7 +6,7 @@
 
 #MovieRowId {
   background-color: var(--color-primario);
-
+  padding-top: 100px;
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vh;

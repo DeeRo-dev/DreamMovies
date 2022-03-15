@@ -9,6 +9,7 @@ import {
   TheRealMovie,
   DetailCapitulos,
   SearchPeliculas,
+  SearchPeliculasGeneros,
 } from "../src/components/index.jsx";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           />
           <Route path="/movie/:idSerie" element={<TheRealMovie />} />
           <Route path="/search/:idPelicula" element={<SearchPeliculas />} />
+          <Route path="/generos/:idPelicula" element={<SearchPeliculasGeneros />} />
         </Routes>
       </div>
     </BrowserRouter>

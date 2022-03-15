@@ -8,6 +8,8 @@ import {
   SEARCH_PELICULA,
   PELICULA_SIMILAR,
   PELICULA_POPULARES,
+  PELICULA_GENEROS,
+  PELICULA_SEARCH_GENEROS,
 } from "../actions";
 
 const initialState = {
@@ -18,6 +20,8 @@ const initialState = {
   searchPelicula: [],
   peliculasSimilares: [],
   peliculasPopulares: [],
+  listaGeneros: [],
+  peliculasSearchGeneros: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -62,17 +66,29 @@ export default function reducer(state = initialState, action) {
         ...state,
         searchPelicula: action.data,
       };
-   
-      case PELICULA_SIMILAR:
+
+    case PELICULA_SIMILAR:
       return {
         ...state,
         peliculasSimilares: action.data,
       };
-      
-      case PELICULA_POPULARES:
+
+    case PELICULA_POPULARES:
       return {
         ...state,
         peliculasPopulares: action.data,
+      };
+
+    case PELICULA_GENEROS:
+      return {
+        ...state,
+        listaGeneros: action.data,
+      };
+   
+      case PELICULA_SEARCH_GENEROS:
+      return {
+        ...state,
+        peliculasSearchGeneros: action.data,
       };
 
     default:
