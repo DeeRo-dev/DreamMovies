@@ -12,8 +12,7 @@ export default function DetailCapitulos() {
   const capitulos = useSelector((state) => state.allCapitulos.episodes);
   const { idSerie, idTemporada } = useParams();
 
-  /*   console.log("idSerie", idSerie)
-  console.log("idTemporada", idTemporada) */
+
 
   useEffect(() => {
     dispatch(getAllCapitulos(idSerie, idTemporada));

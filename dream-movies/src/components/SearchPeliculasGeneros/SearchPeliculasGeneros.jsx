@@ -2,22 +2,23 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import NavBar from "../NavBar/NavBar";
 import { useDispatch, useSelector } from "react-redux";
-import { searchPelicula } from "../../store/actions";
+import { peliculasSearchGeneros } from "../../store/actions";
 import CardSearchPelicula from "../CardTemp/CardTemp.jsx";
 import { Container, Spinner } from "react-bootstrap";
 import shrekTriste from "../../Images/shrekTriste.png"
-import "./SearchPeliculas.css";
+import "./SearchPeliculasGeneros.css";
 
 
 
 
 export default function DetailTemp() {
   const dispatch = useDispatch();
-  const pelicula = useSelector((state) => state.searchPelicula);
+  const pelicula = useSelector((state) => state.peliculasSearchGeneros);
   const { idPelicula } = useParams();
   const [loading, setLoading] = useState(true);
+
   useEffect(()=>{
-    dispatch(searchPelicula(idPelicula))
+    dispatch(peliculasSearchGeneros(idPelicula))
   },[dispatch])
 
 

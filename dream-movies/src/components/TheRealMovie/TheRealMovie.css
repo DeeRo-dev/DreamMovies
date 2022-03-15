@@ -6,7 +6,7 @@
 
 #MovieRowId {
   background-color: var(--color-primario);
-
+  padding-top: 100px;
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vh;
@@ -70,6 +70,34 @@
   justify-content: center;
   border-radius: 100%;
   background-color: black;
+}
+
+.Movie__Col_MasEpisodios{
+  color: white;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.loading{
+  z-index: 5;
+}
+
+.loading.true{
+  height: 100vh;
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden
+}
+
+.loading.false{
+  display: none;
 }
 
 

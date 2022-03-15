@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { peliculasPopulares, listaGeneros } from "../../store/actions/index";
-import "./Navbar.css";
+import "./NavBarMovie.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Container,
@@ -19,7 +19,7 @@ import {
 
 function NavBar() {
   const peliculas = useSelector((state) => state.peliculasPopulares?.results);
-  const generos = useSelector(state =>  state.listaGeneros)
+  const generos = useSelector((state) => state.listaGeneros);
   const navigateTo = useNavigate();
 
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ function NavBar() {
 
   const changeBackground = () => {
     if (screen.width < 1500) {
-      if (window.scrollY >= 10) {
+      if (window.scrollY >= 20) {
         setNavBarBackgorund(true);
       }
     } else if (window.scrollY >= 90) {
@@ -48,17 +48,15 @@ function NavBar() {
     if (input !== "" && input !== ".") {
       navigateTo("/search/" + input);
     } else {
-      e.preventDefault()
+      e.preventDefault();
       alert("Selecciona un nombre valido");
     }
   }
 
   useEffect(() => {
     dispatch(peliculasPopulares());
-    dispatch(listaGeneros())
+    dispatch(listaGeneros());
   }, [dispatch]);
-
-
 
   return (
     <Container fluid className="NavBar__ContainerNav">
@@ -82,17 +80,19 @@ function NavBar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#Home">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#action2">Recomendado</Nav.Link>
               <NavDropdown title="Generos" id="navbarScrollingDropdown">
-                {
-                  generos?.genres?.map((i) => {
-                
-                    return (<NavDropdown.Item href={`/generos/${i.id}`} className="GenreList">{i.name}</NavDropdown.Item> )
-                    
-                  })
-                }
-
+                {generos?.genres?.map((i) => {
+                  return (
+                    <NavDropdown.Item
+                      href={`/generos/${i.id}`}
+                      className="GenreList"
+                    >
+                      {i.name}
+                    </NavDropdown.Item>
+                  );
+                })}
               </NavDropdown>
             </Nav>
 
@@ -111,44 +111,6 @@ function NavBar() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      <Carousel className="NavBar__Carousel">
-        <Carousel.Item className="NavBar__Carousel" interval={3000}>
-          <img
-            className="NavBar__Img"
-            src={`https://image.tmdb.org/t/p/original/${peliculas?.[0].backdrop_path}`}
-            alt="First slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={3000}>
-          <img
-            src={`https://image.tmdb.org/t/p/original/${peliculas?.[1].backdrop_path}`}
-            alt="Second slide"
-            className="NavBar__Img"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={3000}>
-          <img
-            className="NavBar__Img"
-            src={`https://image.tmdb.org/t/p/original/${peliculas?.[2].backdrop_path}`}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={3000}>
-          <img
-            className="NavBar__Img"
-            src={`https://image.tmdb.org/t/p/original/${peliculas?.[3].backdrop_path}`}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={3000}>
-          <img
-            className="NavBar__Img"
-            src={`https://image.tmdb.org/t/p/original/${peliculas?.[5].backdrop_path}`}
-            alt="Third slide"
-          />
-        </Carousel.Item>
-      </Carousel>
     </Container>
   );
 }

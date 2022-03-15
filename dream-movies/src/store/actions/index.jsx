@@ -7,6 +7,10 @@ export const GET_VIDEO_SERIE = 'GET_VIDEO_SERIE';
 export const GET_PELICULA = 'GET_PELICULA';
 export const GET_PELICULA_VIDEO = 'GET_PELICULA_VIDEO';
 export const SEARCH_PELICULA = 'SEARCH_PELICULA';
+export const PELICULA_SIMILAR = 'PELICULA_SIMILAR';
+export const PELICULA_POPULARES = 'PELICULA_POPULARES';
+export const PELICULA_GENEROS = 'PELICULA_GENEROS';
+export const PELICULA_SEARCH_GENEROS = 'PELICULA_SEARCH_GENEROS';
 let apiKey = 'b1862b40bc3477ded26344589e44acf0';
 
 export function getTemp(idSerie) {
@@ -113,6 +117,71 @@ export function searchPelicula(idPelicula) {
       
       return dispatch({
         type: SEARCH_PELICULA,
+        data: json.data,
+       
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+}
+
+export function peliculaSimilar(idPelicula) {
+  return async (dispatch) => {
+    try {
+      const json = await axios.get(`https://api.themoviedb.org/3/movie/${idPelicula}/similar?api_key=${apiKey}&language=es`);
+      
+      return dispatch({
+        type: PELICULA_SIMILAR,
+        data: json.data,
+       
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+}
+
+export function peliculasPopulares(idPelicula) {
+  return async (dispatch) => {
+    try {
+      const json = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=es`);
+      
+      return dispatch({
+        type: PELICULA_POPULARES,
+        data: json.data,
+       
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+}
+
+
+export function listaGeneros() {
+  return async (dispatch) => {
+    try {
+      const json = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=es`);
+      
+      return dispatch({
+        type: PELICULA_GENEROS,
+        data: json.data,
+       
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
+}
+
+export function peliculasSearchGeneros(idPelicula) {
+  return async (dispatch) => {
+    try {
+      const json = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${idPelicula}&language=es`);
+      
+      return dispatch({
+        type: PELICULA_SEARCH_GENEROS,
         data: json.data,
        
       });

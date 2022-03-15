@@ -6,6 +6,10 @@ import {
   GET_PELICULA,
   GET_PELICULA_VIDEO,
   SEARCH_PELICULA,
+  PELICULA_SIMILAR,
+  PELICULA_POPULARES,
+  PELICULA_GENEROS,
+  PELICULA_SEARCH_GENEROS,
 } from "../actions";
 
 const initialState = {
@@ -14,6 +18,10 @@ const initialState = {
   oneCapitulo: [],
   videoSerie: [],
   searchPelicula: [],
+  peliculasSimilares: [],
+  peliculasPopulares: [],
+  listaGeneros: [],
+  peliculasSearchGeneros: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -59,11 +67,36 @@ export default function reducer(state = initialState, action) {
         searchPelicula: action.data,
       };
 
+    case PELICULA_SIMILAR:
+      return {
+        ...state,
+        peliculasSimilares: action.data,
+      };
+
+    case PELICULA_POPULARES:
+      return {
+        ...state,
+        peliculasPopulares: action.data,
+      };
+
+    case PELICULA_GENEROS:
+      return {
+        ...state,
+        listaGeneros: action.data,
+      };
+   
+      case PELICULA_SEARCH_GENEROS:
+      return {
+        ...state,
+        peliculasSearchGeneros: action.data,
+      };
+
     default:
       return state;
   }
 }
-/*                   /"\
+
+/*                                                       /"\
                                                         |\./|
                                                         |   |
                                                         |   |
