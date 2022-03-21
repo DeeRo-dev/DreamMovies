@@ -65,7 +65,18 @@ padding: 30px;
 .Home__ContentMovie img{
     width: 100%;
 }
-
+/* .Home__ContentPoster1{
+    
+    width: auto;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    margin: 16px;
+}
+.Home__ContentPoster1 img{
+    width: 500px;
+    height:50vh;
+} */
 .Home__ContentPoster2{
 
     width: auto;
