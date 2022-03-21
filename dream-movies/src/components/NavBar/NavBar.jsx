@@ -56,7 +56,6 @@ function NavBar() {
     dispatch(peliculasPopulares());
   }, [dispatch]);
 
-  console.log(peliculas);
 
   return (
     <Container fluid className="NavBar__ContainerNav">
