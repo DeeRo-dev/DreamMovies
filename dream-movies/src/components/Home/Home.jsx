@@ -25,19 +25,41 @@ useEffect(()=> {
       <NavBar />
       <Container fluid className="Home__Contaner">
         <Container fluid className="Home__Contaner_movies">
+          
+
+  <h2 className="Home__ContentPeliTitlte">¡Ultimo Agregado!</h2>
+  <hr />
+        <Container className="Home__ContentSerie">
+          
+              <Link to="/temp/456" >
+                <div className="Home__Colum">
+                   <Image className="Home__ContentPosterImgSerie" src="https://www.abc.es/media/capitulos/000/082/899/el-amor-es-una-cosa-hecha-anicos-1.jpg" alt="" /> 
+                </div>
+            
+              </Link>
+              <Link to="/temp/15260" >
+              <div className="Home__Colum">
+               <Image className="Home__ContentPosterImgSerie" src="https://www.raccoongames.es/img/productos/2014/12/14/01319300101_g.jpg" alt="" /> 
+                </div>
+              </Link>
+            </Container>
+    
+
+
           <Row className="Home__Row">
             <Col className="Home__Col" xxl={9}>
-            <h2 className="Home__ContentSeriesTitlte">¡Lo mas visto!</h2>
-              <Container className="Home__ContentSeries">
+            <h2 className="Home__ContentPeliTitlte">¡Lo mas visto!</h2>
+            <hr />
+              <Container className="Home__ContentPeli">
               
 
                  {
                    pMasvistas?.map(e =>{
                      return(
-                      <Link to={`/movie/${e?.id}/`}>
+                      <Link className="Home__ContentPelilink" to={`/movie/${e?.id}/`}>
                       <Col  className="Home__ContentPoster">
                         <Image className="Home__ContentPosterImg" src={`https://image.tmdb.org/t/p/w500${e?.poster_path}`} alt="" />
-                        <h2>{e?.release_date}</h2>
+                        <h2 className="Home__TitlePoster">{e?.release_date}</h2>
                       </Col>
                     </Link>
                      )

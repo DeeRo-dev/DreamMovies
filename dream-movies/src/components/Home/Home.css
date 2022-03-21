@@ -24,11 +24,24 @@
 
 .Home__Col{
     width: 100%;
-   
-    border: 1px solid black  ;
+    
 }
-
-.Home__ContentSeries{
+.Home__ContentSerie{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.Home__ContentPosterImgSerie{
+    width: 150px;
+    height:220px;
+}
+.Home__Colum{
+    margin-right: 20px;
+    margin-top: 15px;
+   margin-bottom: 10px;
+}
+.Home__ContentPeli{
    display:grid;
    grid-template-columns: repeat(5, 1fr);
     width: 100%;
@@ -36,11 +49,19 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+    padding: 5px;
+
 }
-.Home__ContentSeriesTitlte{
+.Home__ContentPelilink{
+  
+    outline: none;
+    text-decoration-line:none ;
+}
+.Home__ContentPeliTitlte{
   width: auto;
    margin-top: 20px;
-   text-align: center;
+  text-align: end;
+   
 }
 
 
@@ -50,10 +71,7 @@
     height: auto;
     margin-right: 30px;
 }
-.Home__ContentEntrarSerie img{
-    width: 200px;
-    height: 200px;
-}
+
 
 .Home__ContentMovie{
     width: 100%;
@@ -66,17 +84,21 @@
 }
 
 .Home__ContentPoster{
-   
-    width: auto;
+    width:auto;
     height: auto;
-    
     text-align: center;
-    
+    border-radius: 10px;
+  
 }
-.Home__ContentPoster h2{
+.Home__ContentPoster:hover{
+   background-color: rgba(7, 105, 191, 0.159);
+}
+.Home__TitlePoster{
     font-size: 20px;
+   color: #fff;
+   text-decoration-line: none
 }
 .Home__ContentPosterImg{
-    width: 200px;
-    height:auto;
+    width: 180px;
+    height:260px;
 }
