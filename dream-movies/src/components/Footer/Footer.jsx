@@ -17,7 +17,6 @@ export default function Footer(){
               <h4>Derek Cabrera</h4>
               <ul>
                  <li><FontAwesomeIcon icon={faLinkedin} /></li>
-                  <li>website</li>
                   <li><FontAwesomeIcon icon={faGithub} /></li>
               </ul>
             </div> 
@@ -25,9 +24,8 @@ export default function Footer(){
               
               <h4>Liam Marega</h4>
               <ul>
-                 <li>Linkedin</li>
-                  <li>website</li>
-                  <li>Github</li>
+              <li><FontAwesomeIcon icon={faLinkedin} /></li>
+                  <li><FontAwesomeIcon icon={faGithub} /></li>
               </ul>
             </div> 
         </Col>
@@ -35,7 +33,7 @@ export default function Footer(){
           <div>
               <h1> contacto </h1>
               <ul>
-                 <li>Email</li>
+                 
           
                   <li>insta fisticio de la web</li>
               </ul>
