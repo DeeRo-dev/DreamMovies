@@ -11,6 +11,9 @@
 }
 .Footer__prueba2{
   background-color: rgba(255, 172, 127, 0);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .Footer__prueba3{
   background-color: rgba(158, 19, 204, 0);

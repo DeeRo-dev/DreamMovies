@@ -11,9 +11,18 @@ export default function Footer(){
     <Container fluid className="Footer__Content">
       <Row>
         <Col  className="Footer__prueba">
-             <h2>Desarrolladores</h2>
+        <div>
+          <h1>Dream Movies</h1>
+           <h4>Derechos reservados</h4>
+           <h4>copy rigth</h4>
+        </div>
+            
+        </Col>
+        <Col md={5} className="Footer__prueba2">
+      
+        <h2>Desarrolladores</h2>
+        <Container>
            <div>
-           
               <h4>Derek Cabrera</h4>
               <ul>
                  <li><FontAwesomeIcon icon={faLinkedin} /></li>
@@ -28,23 +37,17 @@ export default function Footer(){
                   <li><FontAwesomeIcon icon={faGithub} /></li>
               </ul>
             </div> 
-        </Col>
-        <Col  className="Footer__prueba2">
-          <div>
-              <h1> contacto </h1>
-              <ul>
-                 
-          
-                  <li>insta fisticio de la web</li>
-              </ul>
-           </div>
+        </Container>
+    
         </Col>
         <Col className="Footer__prueba3">
         <div>
-          <h1>Dream Movies</h1>
-           <h4>Derechos reservados</h4>
-           <h4>copy rigth</h4>
-        </div>
+              <h1> contacto </h1>
+              <ul>
+                  <li>DreamMovies@dream.com</li>
+               
+              </ul>
+           </div>
         </Col>
       </Row>
     </Container>
