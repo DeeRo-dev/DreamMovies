@@ -1,0 +1,17 @@
+
+.Footer__Content{
+  height: 300px;
+  background-color: rgb(18, 10, 36);
+  color: #fff;
+}
+
+.Footer__prueba{
+  background-color: rgba(127, 255, 212, 0);
+  height: 300px;
+}
+.Footer__prueba2{
+  background-color: rgba(255, 172, 127, 0);
+}
+.Footer__prueba3{
+  background-color: rgba(158, 19, 204, 0);
+}

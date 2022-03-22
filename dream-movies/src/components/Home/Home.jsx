@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { peliculasPopulares } from "../../store/actions";
 import { NavBar } from "../index";
 import { Container, Row, Col, Image, Ratio } from "react-bootstrap";
-
+import Footer from "../Footer/Footer";
 
 function Home() {
  
@@ -69,8 +69,12 @@ useEffect(()=> {
             </Col>
           
           </Row>
+         
         </Container>
+        
       </Container>
+     
+      <Footer/>
     </div>
   );
 }
