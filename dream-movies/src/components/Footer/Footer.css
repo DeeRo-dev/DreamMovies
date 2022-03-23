@@ -32,6 +32,7 @@
   margin-top: 10px;
   border-left: 3px solid var(--color-primario);
   border-right: 3px solid var(--color-primario);
+  height: auto;
 }
 .Footer__prueba3{
   background-color: rgba(158, 19, 204, 0);
@@ -87,12 +88,12 @@
 }
 .Footer__Icon{
   font-size: 20px;
-  padding: 5px;
+   padding: 5px; 
   border-radius: 50%;
 }
 .Footer__Icon:hover{
   color: var(--color-primario); 
   background-color: #fff;
   border-radius: 50%;
-   transition: 3s; 
+   transition: 1.5s; 
 }
