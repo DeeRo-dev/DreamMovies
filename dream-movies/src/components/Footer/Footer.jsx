@@ -33,8 +33,8 @@ export default function Footer(){
               <a  target={'blanck'} href="https://derek-cabrera.vercel.app/"><h4 className="Footer__Titleh4">Derek Cabrera</h4></a>
              
               <ul>
-              <a  target={'blanck'} href="https://www.linkedin.com/in/derek-cabrera-fullstack/"> <li  className="Footer__Li"><FontAwesomeIcon icon={faLinkedin} /></li></a>
-              <a  target={'blanck'} href="https://github.com/DeeRo-dev"> <li className="Footer__Li" ><FontAwesomeIcon icon={faGithub} /></li></a>
+              <a  target={'blanck'} href="https://www.linkedin.com/in/derek-cabrera-fullstack/"> <li  className="Footer__Li"><FontAwesomeIcon  className="Footer__Icon" icon={faLinkedin} /></li></a>
+              <a  target={'blanck'} href="https://github.com/DeeRo-dev"> <li className="Footer__Li" ><FontAwesomeIcon className="Footer__Icon" icon={faGithub} /></li></a>
               </ul>
             </div> 
             <div className="Footer__NombresDevs">
@@ -42,8 +42,8 @@ export default function Footer(){
             <a  target={'blanck'} href="https://portfolio-liammarega.netlify.app/"><h4 className="Footer__Titleh4">Liam Marega</h4></a>
               
               <ul >
-              <a  target={'blanck'} href="https://www.linkedin.com/in/liam-marega/"> <li className="Footer__Li"><FontAwesomeIcon icon={faLinkedin} /></li></a>
-              <a  target={'blanck'} href="https://github.com/LiamMarega"> <li className="Footer__Li"><FontAwesomeIcon icon={faGithub} /></li></a>
+              <a  target={'blanck'} href="https://www.linkedin.com/in/liam-marega/"> <li className="Footer__Li"><FontAwesomeIcon className="Footer__Icon" icon={faLinkedin} /></li></a>
+              <a  target={'blanck'} href="https://github.com/LiamMarega"> <li className="Footer__Li"><FontAwesomeIcon className="Footer__Icon" icon={faGithub} /></li></a>
               </ul>
             </div> 
         </Container>
@@ -54,7 +54,7 @@ export default function Footer(){
               <h1 className="Footer__Titleh1"> Contacto </h1>
               <hr />
               <ul>
-                  <li className="Footer__Email">DreamMovies@dream.com</li>
+                  <li className="Footer__Email"> Dream.Movi3s@gmail.com</li>
                
               </ul>
            </Container>

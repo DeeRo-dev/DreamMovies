@@ -15,7 +15,7 @@
   display: flex;
   flex-direction:column;
   text-align: left;
-  margin-top: 50px;
+  margin-top: 54px;
 }
 .Footer__Span{
   margin-top: 20px;
@@ -84,4 +84,15 @@
 .Footer__NombresDevs a{
   text-decoration: none;
  
+}
+.Footer__Icon{
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+}
+.Footer__Icon:hover{
+  color: var(--color-primario); 
+  background-color: #fff;
+  border-radius: 50%;
+   transition: 3s; 
 }
