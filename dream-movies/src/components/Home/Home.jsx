@@ -27,7 +27,7 @@ useEffect(()=> {
         <Container fluid className="Home__Contaner_movies">
           
 
-  <h2 className="Home__ContentPeliTitlte">¡Ultimo Agregado!</h2>
+  <h2 className="Home__ContentPeliTitlte">¡Series animadas!</h2>
   <hr />
         <Container className="Home__ContentSerie">
           
