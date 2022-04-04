@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     color: #fff;
+    padding-bottom: 150px;
 }
 
 .Home__Contaner_movies{
@@ -17,57 +18,88 @@
 }
 
 .Home__Row{
-   
+   width: 100%;
+ 
     height: 100%;
 }
 
 .Home__Col{
+    width: 100%;
     
-    border: 1px solid black  ;
+}
+.Home__ContentSerie{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.Home__ContentPosterImgSerie{
+    width: 150px;
+    height:220px;
+}
+.Home__Colum{
+    margin-right: 20px;
+    margin-top: 15px;
+   margin-bottom: 10px;
+}
+.Home__ContentPeli{
+   display:grid;
+   grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    flex-direction:row ;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
+
+}
+.Home__ContentPelilink{
+  
+    outline: none;
+    text-decoration-line:none ;
+}
+.Home__ContentPeliTitlte{
+  width: auto;
+   margin-top: 20px;
+  text-align: end;
+   
 }
 
-.Home__ContentSeries{
-   
-    width: 100%;
-    height: 300px;
-}
+
 .Home__ContentEntrarSerie{
     display: inline-block;
     width: auto;
     height: auto;
     margin-right: 30px;
 }
-.Home__ContentEntrarSerie img{
-    width: 200px;
-    height: 200px;
-}
+
 
 .Home__ContentMovie{
-    width: auto;
-    height: auto;
+    width: 100%;
     text-align: center;
     
 }
-.Home__ContentPoster1{
- 
-    width: auto;
-    height:auto;
-    margin: 10px;
-}
-.Home__ContentPoster1 img{
-   
-    width: 122vh;
-    height:55vh;
-}
-.Home__ContentPoster2{
 
-    width: auto;
-    height: auto;
-    display: inline-block;
-    text-align: center;
-    margin: 16px;
+.Home__ContentMovie img{
+    width: 100%;
 }
-.Home__ContentPoster2 img{
-    width: 37vh;
-    height:50vh;
+
+.Home__ContentPoster{
+    width:auto;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+  
+}
+.Home__ContentPoster:hover{
+   background-color: rgba(7, 105, 191, 0.159);
+}
+.Home__TitlePoster{
+    font-size: 20px;
+   color: #fff;
+   text-decoration-line: none
+}
+.Home__ContentPosterImg{
+    width: 180px;
+    height:260px;
 }

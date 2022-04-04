@@ -52,6 +52,17 @@
   display: none;
 }
 
+.DetailTemp__Container_Error{
+  height: 100vh;
+  background-color: var(--color-primario); 
+  color: white;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
 @keyframes typing{
   from{width: 0;}
   

@@ -72,6 +72,34 @@
   background-color: black;
 }
 
+.Movie__Col_MasEpisodios{
+  color: white;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.loading{
+  z-index: 5;
+}
+
+.loading.true{
+  height: 100vh;
+    background-color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: fixed;
+    overflow: hidden
+}
+
+.loading.false{
+  display: none;
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     #MovieRowId {

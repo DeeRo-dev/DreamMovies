@@ -1,0 +1,99 @@
+@import "../../variables.css";
+.Footer__Content{
+  height: 300px;
+  background-color: rgb(13, 10, 41);
+  color: #fff;
+}
+
+.Footer__prueba{
+  background-color: rgba(127, 255, 212, 0);
+  height: 300px;
+  text-align: center;
+  
+}
+.Footer__TextDerechos{
+  display: flex;
+  flex-direction:column;
+  text-align: left;
+  margin-top: 54px;
+}
+.Footer__Span{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  text-align: left;
+}
+.Footer__prueba2{
+  background-color: rgba(255, 172, 127, 0);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10px;
+  border-left: 3px solid var(--color-primario);
+  border-right: 3px solid var(--color-primario);
+  height: auto;
+}
+.Footer__prueba3{
+  background-color: rgba(158, 19, 204, 0);
+  text-align: center;
+}
+
+.Footer__ContentDevs{
+  display: flex;
+  flex-direction:column;
+  margin: auto;
+ 
+}
+.Footer__TitleDevs{
+  margin-top: 50px;
+  text-align: left;
+}
+.Footer__Li{
+  list-style: none;
+  display: inline-block;
+   margin-right: 50px;
+  padding-left: 20px; 
+  font-size: 17px;
+
+}
+
+.Footer__TextContact{
+  margin-top: 60px;
+  text-align: left;
+}
+.Footer__Email{
+   list-style: none;
+  font-size: 17px;
+  margin-top: 50px;
+}
+.Footer__Titleh1{
+  font-size: 25px;
+}
+.Footer__Titleh4{
+  font-size: 25px;
+  text-decoration: none !important;;
+  outline: none;
+  border-bottom: none;
+  color: #fff;
+  text-decoration-line:none!important;
+}
+.Footer__Span{
+  font-size: 17px;
+}
+
+.Footer__NombresDevs a{
+  text-decoration: none;
+ 
+}
+.Footer__Icon{
+  font-size: 20px;
+   padding: 5px; 
+  border-radius: 50%;
+}
+.Footer__Icon:hover{
+  color: var(--color-primario); 
+  background-color: #fff;
+  border-radius: 50%;
+   transition: 1.5s; 
+}

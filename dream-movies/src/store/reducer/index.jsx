@@ -6,6 +6,8 @@ import {
   GET_PELICULA,
   GET_PELICULA_VIDEO,
   SEARCH_PELICULA,
+  PELICULA_SIMILAR,
+  PELICULA_POPULARES,
 } from "../actions";
 
 const initialState = {
@@ -14,6 +16,8 @@ const initialState = {
   oneCapitulo: [],
   videoSerie: [],
   searchPelicula: [],
+  peliculasSimilares: [],
+  peliculasPopulares: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -58,12 +62,25 @@ export default function reducer(state = initialState, action) {
         ...state,
         searchPelicula: action.data,
       };
+   
+      case PELICULA_SIMILAR:
+      return {
+        ...state,
+        peliculasSimilares: action.data,
+      };
+      
+      case PELICULA_POPULARES:
+      return {
+        ...state,
+        peliculasPopulares: action.data,
+      };
 
     default:
       return state;
   }
 }
-/*                   /"\
+
+/*                                                       /"\
                                                         |\./|
                                                         |   |
                                                         |   |
